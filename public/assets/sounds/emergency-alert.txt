@@ -1,0 +1,16 @@
+# Emergency Alert Sound File
+
+This is a placeholder for the emergency alert sound file.
+
+To add a real emergency alert sound:
+1. Place an MP3 or WAV file named "emergency-alert.mp3" or "emergency-alert.wav" in this directory
+2. The sound should be a clear, attention-grabbing tone suitable for emergency situations
+3. Recommended duration: 2-3 seconds
+4. Recommended format: MP3 or WAV
+
+The emergency alert system will automatically play this sound when:
+- Critical or urgent priority alerts are created
+- The user has granted audio permissions
+- The alert status is 'active'
+
+For testing purposes, you can use any short audio file and rename it to "emergency-alert.mp3".

@@ -1,0 +1,32 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::table('lab_requests', function (Blueprint $table) {
+            $table->unsignedBigInteger('test_type_id')->nullable()->after('template_id');
+            $table->foreign('test_type_id')->references('id')->on('lab_test_types')->onDelete('set null');
+            $table->index('test_type_id');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('lab_requests', function (Blueprint $table) {
+            $table->dropForeign(['test_type_id']);
+            $table->dropIndex(['test_type_id']);
+            $table->dropColumn('test_type_id');
+        });
+    }
+};

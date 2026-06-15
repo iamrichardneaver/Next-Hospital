@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Test - NextHospital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .test-button:hover {
+            background: #0056b3;
+        }
+        .test-button.urgent {
+            background: #ffc107;
+            color: #000;
+        }
+        .test-button.critical {
+            background: #dc3545;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .error {
+            background: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🔊 Audio Test - NextHospital</h1>
+        <p>Test the notification sounds for the workflow system.</p>
+        
+        <div>
+            <button class="test-button" onclick="testStandard()">Test Standard Sound</button>
+            <button class="test-button urgent" onclick="testUrgent()">Test Urgent Sound</button>
+            <button class="test-button critical" onclick="testCritical()">Test Critical Sound</button>
+        </div>
+        
+        <div>
+            <button class="test-button" onclick="testAll()">Test All Sounds</button>
+            <button class="test-button" onclick="testQueueAudio()">Test Queue Audio</button>
+            <button class="test-button" onclick="testVolume()">Test Volume</button>
+        </div>
+        
+        <div id="status" class="status" style="display: none;">
+            <strong>Status:</strong> <span id="status-text"></span>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <h3>Enhanced Audio Features:</h3>
+            <ul>
+                <li><strong>Standard:</strong> Rich harmonic sound with natural vibrato</li>
+                <li><strong>Urgent:</strong> Double beep with enhanced harmonics</li>
+                <li><strong>Critical:</strong> Complex alarm pattern with multiple notes</li>
+                <li><strong>Queue Audio:</strong> Musical chime + clear speech announcement</li>
+            </ul>
+            
+            <h4>Audio Improvements:</h4>
+            <ul>
+                <li>✅ Multiple harmonics for richer sound</li>
+                <li>✅ Natural vibrato and frequency modulation</li>
+                <li>✅ Warm low-pass filtering</li>
+                <li>✅ Realistic attack/sustain/release envelopes</li>
+                <li>✅ Clearer speech synthesis settings</li>
+                <li>✅ Better voice selection algorithm</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Load the workflow notifications service -->
+    <script src="/assets/js/workflow-notifications.js"></script>
+    <script src="/assets/js/queue-audio.js"></script>
+    
+    <script>
+        function showStatus(message, isError = false) {
+            const status = document.getElementById('status');
+            const statusText = document.getElementById('status-text');
+            
+            statusText.textContent = message;
+            status.className = isError ? 'status error' : 'status';
+            status.style.display = 'block';
+            
+            setTimeout(() => {
+                status.style.display = 'none';
+            }, 3000);
+        }
+
+        function testStandard() {
+            try {
+                if (window.workflowNotificationService) {
+                    window.workflowNotificationService.testSound('standard');
+                    showStatus('Standard sound played successfully');
+                } else {
+                    showStatus('Workflow notification service not available', true);
+                }
+            } catch (error) {
+                showStatus('Error playing standard sound: ' + error.message, true);
+            }
+        }
+
+        function testUrgent() {
+            try {
+                if (window.workflowNotificationService) {
+                    window.workflowNotificationService.testSound('urgent');
+                    showStatus('Urgent sound played successfully');
+                } else {
+                    showStatus('Workflow notification service not available', true);
+                }
+            } catch (error) {
+                showStatus('Error playing urgent sound: ' + error.message, true);
+            }
+        }
+
+        function testCritical() {
+            try {
+                if (window.workflowNotificationService) {
+                    window.workflowNotificationService.testSound('critical');
+                    showStatus('Critical sound played successfully');
+                } else {
+                    showStatus('Workflow notification service not available', true);
+                }
+            } catch (error) {
+                showStatus('Error playing critical sound: ' + error.message, true);
+            }
+        }
+
+        function testAll() {
+            showStatus('Playing all sounds in sequence...');
+            testStandard();
+            setTimeout(() => testUrgent(), 1000);
+            setTimeout(() => testCritical(), 2000);
+        }
+
+        function testQueueAudio() {
+            try {
+                if (window.queueAudio) {
+                    window.queueAudio.test();
+                    showStatus('Queue audio test played successfully');
+                } else {
+                    showStatus('Queue audio service not available', true);
+                }
+            } catch (error) {
+                showStatus('Error playing queue audio: ' + error.message, true);
+            }
+        }
+
+        function testVolume() {
+            try {
+                if (window.queueAudio) {
+                    window.queueAudio.testVolume();
+                    showStatus('Volume test played - check if you can hear it clearly');
+                } else {
+                    showStatus('Queue audio service not available', true);
+                }
+            } catch (error) {
+                showStatus('Error testing volume: ' + error.message, true);
+            }
+        }
+
+        // Check if services are loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                if (window.workflowNotificationService) {
+                    showStatus('Workflow notification service loaded successfully');
+                } else {
+                    showStatus('Workflow notification service failed to load', true);
+                }
+                
+                if (window.queueAudio) {
+                    showStatus('Queue audio service loaded successfully');
+                } else {
+                    showStatus('Queue audio service failed to load', true);
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

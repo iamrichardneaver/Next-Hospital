@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jitsi Video Call Test - NextHospital</title>
+    <script src="https://meet.jit.si/external_api.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { text-align: center; margin-bottom: 30px; }
+        .info-card { background: #e3f2fd; padding: 15px; border-radius: 5px; margin: 10px 0; }
+        .button { background: #2196f3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 5px; }
+        .button:hover { background: #1976d2; }
+        .button.danger { background: #f44336; }
+        .button.danger:hover { background: #d32f2f; }
+        #jitsi-container { height: 600px; width: 100%; border: 1px solid #ddd; border-radius: 5px; margin: 20px 0; display: none; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .status.success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .status.error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .status.info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 NextHospital - Jitsi Video Call Test</h1>
+            <p>Testing teleconsultation functionality between doctor and patient</p>
+        </div>
+        
+        <div class="info-card">
+            <h3>📋 Teleconsultation Information</h3>
+            <p><strong>ID:</strong> HWC/TC/2025100100003</p>
+            <p><strong>Patient:</strong> Updated Patient</p>
+            <p><strong>Doctor:</strong> Dr. Kofi Mensah</p>
+            <p><strong>Status:</strong> scheduled</p>
+            <p><strong>Meeting URL:</strong> <a href="https://meet.jit.si/nexthospital-test-1759332000-ABC123" target="_blank">https://meet.jit.si/nexthospital-test-1759332000-ABC123</a></p>
+        </div>
+        
+        <div class="info-card">
+            <h3>⚙️ Jitsi Configuration</h3>
+            <p><strong>Server:</strong> https://meet.jit.si</p>
+            <p><strong>Enabled:</strong> Yes</p>
+            <p><strong>Chat:</strong> Yes</p>
+            <p><strong>Screen Sharing:</strong> Yes</p>
+            <p><strong>Recording:</strong> No</p>
+        </div>
+        
+        <div style="text-align: center; margin: 20px 0;">
+            <button class="button" onclick="joinJitsiMeeting()">🎥 Join Video Call</button>
+            <button class="button" onclick="openInNewWindow()">🔄 Open in New Window</button>
+            <button class="button danger" onclick="endCall()">❌ End Call</button>
+        </div>
+        
+        <div id="status" class="status info">
+            Ready to join the video call. Click "Join Video Call" to start.
+        </div>
+        
+        <div id="jitsi-container"></div>
+        
+        <div class="info-card">
+            <h3>📱 Mobile Testing</h3>
+            <p>This page automatically detects mobile devices and opens Jitsi Meet in a new window for better mobile experience.</p>
+            <p><strong>Current Device:</strong> <span id="device-type">Detecting...</span></p>
+        </div>
+    </div>
+
+    <script>
+        let jitsiApi = null;
+        let callStartTime = null;
+        let callDurationInterval = null;
+        
+        // Jitsi configuration
+        const jitsiConfig = {"enabled":true,"server_url":"https:\/\/meet.jit.si","app_id":"","jwt_algorithm":"HS256","meeting_duration_minutes":60,"recording_enabled":false,"chat_enabled":true,"screen_sharing_enabled":true,"file_sharing_enabled":true,"live_streaming_enabled":false,"transcription_enabled":false,"waiting_room_enabled":false,"mute_on_entry":false,"require_display_name":true,"require_password":false,"enable_knocking":true,"enable_lobby":false,"max_participants":100,"default_language":"en","interface_config":{"APP_NAME":"NextHospital Teleconsultation","ENABLE_P2P":true,"ENABLE_CHAT":true,"ENABLE_IPV6":true,"ENABLE_LOBBY":false,"ENABLE_AVATAR":true,"PROVIDER_NAME":"NextHospital","ENABLE_DIAL_IN":false,"LANG_DETECTION":true,"SHOW_POWERED_BY":false,"DEFAULT_LANGUAGE":"en","DEFAULT_LOGO_URL":"","ENABLE_REACTIONS":true,"ENABLE_RECORDING":false,"ENABLE_CLOSE_PAGE":true,"ENABLE_FILE_UPLOAD":true,"ENABLE_FILE_SHARING":true,"ENABLE_PREJOIN_PAGE":true,"ENABLE_WAITING_ROOM":false,"ENABLE_WELCOME_PAGE":true,"ENABLE_TRANSCRIPTION":false,"SHOW_JITSI_WATERMARK":false,"ENABLE_FACE_CENTERING":true,"ENABLE_LIVE_STREAMING":false,"ENABLE_SCREEN_SHARING":true,"DISPLAY_WELCOME_FOOTER":false,"ENABLE_EMAIL_REPORTING":false,"ENABLE_TALK_WHILE_MUTED":true,"ENABLE_NO_AUDIO_DETECTION":true,"SHOW_WATERMARK_FOR_GUESTS":false,"ENABLE_NOISY_MIC_DETECTION":true,"ENABLE_AUDIO_FOCUS_DISABLED":false,"ENABLE_KNOCKING_PARTICIPANT":true,"DISPLAY_WELCOME_PAGE_CONTENT":false,"DEFAULT_WELCOME_PAGE_LOGO_URL":"","ENABLE_DOMINANT_SPEAKER_INDICATOR":true,"GENERATE_ROOMNAMES_ON_WELCOME_PAGE":true,"DISPLAY_WELCOME_PAGE_ADDITIONAL_CARD":false,"DISPLAY_WELCOME_PAGE_TOOLBAR_ADDITIONAL_CONTENT":false},"config_overwrite":{"enableP2P":true,"enableIPv6":true,"enableAvatar":true,"enableDialIn":false,"enableClosePage":true,"enableReactions":true,"enableRecording":false,"enableAudioFocus":true,"enablePrejoinPage":true,"enableWelcomePage":true,"enableFaceCentering":true,"enableLiveStreaming":false,"enableTranscription":false,"startWithAudioMuted":false,"startWithVideoMuted":false,"enableEmailReporting":false,"enableTalkWhileMuted":true,"enableNoAudioDetection":true,"enableNoisyMicDetection":true,"enableDominantSpeakerIndicator":true},"toolbar_buttons":["microphone","camera","closedcaptions","desktop","embedmeeting","fullscreen","fodeviceselection","hangup","profile","chat","recording","livestreaming","etherpad","sharedvideo","settings","raisehand","videoquality","filmstrip","invite","feedback","stats","shortcuts","tileview","videobackgroundblur","download","help","mute-everyone","e2ee","security","whiteboard","reactions","transcription","noise-suppression","noise-cancellation","noise-reduction","noise-filtering","noise-isolation","noise-elimination","noise-removal","noise-suppression","noise-cancellation","noise-reduction","noise-filtering","noise-isolation","noise-elimination","noise-removal"],"default_timezone":"UTC"};
+        
+        // Detect device type
+        const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        document.getElementById("device-type").textContent = isMobile ? "Mobile Device" : "Desktop Device";
+        
+        function updateStatus(message, type = "info") {
+            const status = document.getElementById("status");
+            status.textContent = message;
+            status.className = "status " + type;
+        }
+        
+        function joinJitsiMeeting() {
+            if (!jitsiConfig.enabled) {
+                updateStatus("Jitsi Meet is not enabled", "error");
+                return;
+            }
+            
+            if (isMobile) {
+                openInNewWindow();
+                return;
+            }
+            
+            startJitsiMeeting();
+        }
+        
+        function startJitsiMeeting() {
+            const domain = jitsiConfig.server_url.replace("https://", "").replace("http://", "");
+            const options = {
+                roomName: "nexthospital-test-1759332000-ABC123",
+                width: "100%",
+                height: "100%",
+                parentNode: document.getElementById("jitsi-container"),
+                configOverwrite: {
+                    ...jitsiConfig.config_overwrite,
+                    startWithAudioMuted: jitsiConfig.mute_on_entry || false,
+                    startWithVideoMuted: false,
+                    enableWelcomePage: true,
+                    enableClosePage: true,
+                    enablePrejoinPage: true,
+                },
+                interfaceConfigOverwrite: {
+                    ...jitsiConfig.interface_config,
+                    SHOW_JITSI_WATERMARK: false,
+                    SHOW_WATERMARK_FOR_GUESTS: false,
+                    SHOW_POWERED_BY: false,
+                    PROVIDER_NAME: "NextHospital",
+                    APP_NAME: "NextHospital Teleconsultation",
+                },
+                userInfo: {
+                    displayName: "Test User",
+                    email: "test@nexthospital.com",
+                },
+            };
+            
+            try {
+                jitsiApi = new JitsiMeetExternalAPI(domain, options);
+                
+                // Show the container
+                document.getElementById("jitsi-container").style.display = "block";
+                updateStatus("Connecting to Jitsi Meet...", "info");
+                
+                // Set up event listeners
+                jitsiApi.addListener("videoConferenceJoined", function() {
+                    updateStatus("Successfully joined the video call!", "success");
+                    startCallTimer();
+                });
+                
+                jitsiApi.addListener("videoConferenceLeft", function() {
+                    updateStatus("Left the video call", "info");
+                    stopCallTimer();
+                });
+                
+                jitsiApi.addListener("readyToClose", function() {
+                    updateStatus("Call ended", "info");
+                    stopCallTimer();
+                });
+                
+                jitsiApi.addListener("errorOccurred", function(error) {
+                    console.error("Jitsi error:", error);
+                    updateStatus("An error occurred during the meeting: " + error.error, "error");
+                });
+                
+            } catch (error) {
+                console.error("Failed to start Jitsi meeting:", error);
+                updateStatus("Failed to start video meeting: " + error.message, "error");
+            }
+        }
+        
+        function openInNewWindow() {
+            window.open("https://meet.jit.si/nexthospital-test-1759332000-ABC123", "_blank");
+            updateStatus("Opened Jitsi Meet in new window", "success");
+        }
+        
+        function endCall() {
+            if (jitsiApi) {
+                jitsiApi.dispose();
+                jitsiApi = null;
+            }
+            document.getElementById("jitsi-container").style.display = "none";
+            updateStatus("Call ended", "info");
+            stopCallTimer();
+        }
+        
+        function startCallTimer() {
+            callStartTime = new Date();
+            callDurationInterval = setInterval(updateCallDuration, 1000);
+        }
+        
+        function stopCallTimer() {
+            if (callDurationInterval) {
+                clearInterval(callDurationInterval);
+                callDurationInterval = null;
+            }
+        }
+        
+        function updateCallDuration() {
+            if (callStartTime) {
+                const now = new Date();
+                const duration = Math.floor((now - callStartTime) / 1000);
+                const minutes = Math.floor(duration / 60);
+                const seconds = duration % 60;
+                updateStatus("Call in progress - Duration: " + minutes + ":" + (seconds < 10 ? "0" : "") + seconds, "success");
+            }
+        }
+        
+        // Auto-start for testing
+        setTimeout(() => {
+            updateStatus("Auto-starting video call in 3 seconds...", "info");
+            setTimeout(joinJitsiMeeting, 3000);
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,1346 @@
+﻿C:\xampp\php\php.exe : Cannot create a file when that file already exists.
+At C:\Users\Admin\AppData\Local\Temp\ps-script-e5067a59-dcfb-430a-9e83-3a4e677825b0.ps1:86 char:1
++ C:\xampp\php\php.exe artisan route:list 2>&1 | Out-File -FilePath "C: ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Cannot create a...already exists.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+  GET|HEAD        / .................................................................................................. 
+  GET|HEAD        api/app-version/check ........................................ API\AppVersionController@checkVersion
+  GET|HEAD        api/appointment-fees ................... appointment-fees.index ΓÇ║ API\AppointmentFeeController@index
+  POST            api/appointment-fees ................... appointment-fees.store ΓÇ║ API\AppointmentFeeController@store
+  POST            api/appointment-fees/calculate ........................... API\AppointmentFeeController@calculateFee
+  GET|HEAD        api/appointment-fees/statistics ......................... API\AppointmentFeeController@getStatistics
+  GET|HEAD        api/appointment-fees/{appointment_fee} ... appointment-fees.show ΓÇ║ API\AppointmentFeeController@show
+  PUT|PATCH       api/appointment-fees/{appointment_fee} appointment-fees.update ΓÇ║ API\AppointmentFeeController@update
+  DELETE          api/appointment-fees/{appointment_fee} appointment-fees.destroy ΓÇ║ API\AppointmentFeeController@destΓÇª
+  GET|HEAD        api/appointment-slots ................ appointment-slots.index ΓÇ║ API\AppointmentSlotController@index
+  POST            api/appointment-slots ................ appointment-slots.store ΓÇ║ API\AppointmentSlotController@store
+  GET|HEAD        api/appointment-slots/available .................... API\AppointmentSlotController@getAvailableSlots
+  POST            api/appointment-slots/bulk-create ......................... API\AppointmentSlotController@bulkCreate
+  GET|HEAD        api/appointment-slots/statistics ....................... API\AppointmentSlotController@getStatistics
+  GET|HEAD        api/appointment-slots/{appointment_slot} appointment-slots.show ΓÇ║ API\AppointmentSlotController@show
+  PUT|PATCH       api/appointment-slots/{appointment_slot} appointment-slots.update ΓÇ║ API\AppointmentSlotController@uΓÇª
+  DELETE          api/appointment-slots/{appointment_slot} appointment-slots.destroy ΓÇ║ API\AppointmentSlotController@ΓÇª
+  POST            api/appointment-slots/{slot}/block ......................... API\AppointmentSlotController@blockSlot
+  POST            api/appointment-slots/{slot}/unblock ..................... API\AppointmentSlotController@unblockSlot
+  POST            api/appointments ................................................... API\AppointmentController@store
+  GET|HEAD        api/appointments .......................... api.appointments.index ΓÇ║ API\AppointmentController@index
+  GET|HEAD        api/appointments/available-dates ....................... API\AppointmentController@getAvailableDates
+  GET|HEAD        api/appointments/available-slots ................... API\AppointmentController@getAvailableTimeSlots
+  GET|HEAD        api/appointments/available-time-slots .............. API\AppointmentController@getAvailableTimeSlots
+  GET|HEAD        api/appointments/cost-estimate ........................... API\AppointmentController@getCostEstimate
+  POST            api/appointments/paystack/initialize ........ API\AppointmentController@initializeAppointmentPayment
+  POST            api/appointments/paystack/process .............. API\AppointmentController@processAppointmentPayment
+  GET|HEAD        api/appointments/reminders .................................. API\AppointmentController@getReminders
+  GET|HEAD        api/appointments/statistics ................................ API\AppointmentController@getStatistics
+  GET|HEAD        api/appointments/today ............................................. API\AppointmentController@today
+  GET|HEAD        api/appointments/upcoming ....................................... API\AppointmentController@upcoming
+  GET|HEAD        api/appointments/user ................................ API\AppointmentController@getUserAppointments
+  GET|HEAD        api/appointments/{appointment} .............. api.appointments.show ΓÇ║ API\AppointmentController@show
+  PUT|PATCH       api/appointments/{appointment} .......... api.appointments.update ΓÇ║ API\AppointmentController@update
+  DELETE          api/appointments/{appointment} ........ api.appointments.destroy ΓÇ║ API\AppointmentController@destroy
+  GET|HEAD        api/appointments/{appointment}/can-cancel ........... API\AppointmentController@canCancelAppointment
+  POST            api/appointments/{appointment}/cancel ............................. API\AppointmentController@cancel
+  POST            api/appointments/{appointment}/complete ......................... API\AppointmentController@complete
+  POST            api/appointments/{appointment}/join-virtual ....... API\AppointmentController@joinVirtualAppointment
+  POST            api/appointments/{appointment}/reschedule ..................... API\AppointmentController@reschedule
+  POST            api/appointments/{appointment}/send-reminder ................ API\AppointmentController@sendReminder
+  PATCH           api/appointments/{appointment}/status ....................... API\AppointmentController@updateStatus
+  POST            api/auth/forgot-password ......................................... API\AuthController@forgotPassword
+  POST            api/auth/login ............................................................ API\AuthController@login
+  POST            api/auth/logout .......................................................... API\AuthController@logout
+  GET|HEAD        api/auth/me .................................................................. API\AuthController@me
+  POST            api/auth/register ...................................................... API\AuthController@register
+  POST            api/auth/register-patient ....................................... API\AuthController@registerPatient
+  POST            api/auth/reset-password ........................................... API\AuthController@resetPassword
+  GET|HEAD        api/auth/user .............................................................. API\AuthController@user
+  GET|HEAD        api/bed-assignments ...................... bed-assignments.index ΓÇ║ API\BedAssignmentController@index
+  POST            api/bed-assignments ...................... bed-assignments.store ΓÇ║ API\BedAssignmentController@store
+  GET|HEAD        api/bed-assignments/available-beds .................... API\BedAssignmentController@getAvailableBeds
+  GET|HEAD        api/bed-assignments/statistics .................. API\BedAssignmentController@getAdmissionStatistics
+  POST            api/bed-assignments/{assignment}/discharge ................... API\BedAssignmentController@discharge
+  POST            api/bed-assignments/{assignment}/transfer ..................... API\BedAssignmentController@transfer
+  GET|HEAD        api/bed-assignments/{bed_assignment} ....... bed-assignments.show ΓÇ║ API\BedAssignmentController@show
+  PUT|PATCH       api/bed-assignments/{bed_assignment} ... bed-assignments.update ΓÇ║ API\BedAssignmentController@update
+  DELETE          api/bed-assignments/{bed_assignment} . bed-assignments.destroy ΓÇ║ API\BedAssignmentController@destroy
+  GET|HEAD        api/beds ...................................................... beds.index ΓÇ║ API\BedController@index
+  POST            api/beds ...................................................... beds.store ΓÇ║ API\BedController@store
+  POST            api/beds/assign .................................................. API\BedAssignmentController@store
+  GET|HEAD        api/beds/availability ............................................ API\BedController@getAvailability
+  GET|HEAD        api/beds/available .................................... API\BedAssignmentController@getAvailableBeds
+  POST            api/beds/discharge/{assignment} .............................. API\BedAssignmentController@discharge
+  POST            api/beds/transfer/{assignment} ................................ API\BedAssignmentController@transfer
+  GET|HEAD        api/beds/{bed} .................................................. beds.show ΓÇ║ API\BedController@show
+  PUT|PATCH       api/beds/{bed} .............................................. beds.update ΓÇ║ API\BedController@update
+  DELETE          api/beds/{bed} ............................................ beds.destroy ΓÇ║ API\BedController@destroy
+  GET|HEAD        api/beds/{id}/active-assignment .............................. API\BedController@getActiveAssignment
+  GET|HEAD        api/billing/available-services .......................... API\BillingController@getAvailableServices
+  POST            api/billing/generate-standalone-bill .................. API\BillingController@generateStandaloneBill
+  GET|HEAD        api/billing/insurance-claims .............................. API\BillingController@getInsuranceClaims
+  POST            api/billing/insurance-claims ............................ API\BillingController@submitInsuranceClaim
+  GET|HEAD        api/billing/invoices ...................................... API\BillingController@getPatientInvoices
+  GET|HEAD        api/billing/monthly-revenue ................................ API\BillingController@getMonthlyRevenue
+  GET|HEAD        api/billing/payment-methods ............................ API\BillingController@getPaymentMethodStats
+  GET|HEAD        api/billing/payments ...................................... API\BillingController@getPatientPayments
+  POST            api/billing/payments ........................................... API\BillingController@createPayment
+  POST            api/billing/payments/card ................................. API\BillingController@processCardPayment
+  POST            api/billing/payments/mobile-money .................. API\BillingController@processMobileMoneyPayment
+  POST            api/billing/payments/paystack ......................... API\BillingController@processPaystackPayment
+  POST            api/billing/payments/paystack/initialize ........... API\BillingController@initializePaystackPayment
+  POST            api/billing/payments/paystack/verify ................... API\BillingController@verifyPaystackPayment
+  GET|HEAD        api/billing/statistics ......................................... API\BillingController@getStatistics
+  GET|HEAD        api/billing/summary ........................................ API\BillingController@getBillingSummary
+  GET|HEAD        api/blood-bank/donations .................................... API\BloodBankController@indexDonations
+  POST            api/blood-bank/donations ..................................... API\BloodBankController@storeDonation
+  GET|HEAD        api/blood-bank/donations/{id} ................................. API\BloodBankController@showDonation
+  PUT             api/blood-bank/donations/{id} ............................... API\BloodBankController@updateDonation
+  DELETE          api/blood-bank/donations/{id} .............................. API\BloodBankController@destroyDonation
+  GET|HEAD        api/blood-bank/inventory .................................... API\BloodBankController@indexInventory
+  GET|HEAD        api/blood-bank/inventory/alerts/low-stock ................ API\BloodBankController@getLowStockAlerts
+  GET|HEAD        api/blood-bank/inventory/{id} ................................ API\BloodBankController@showInventory
+  PUT             api/blood-bank/inventory/{id} .............................. API\BloodBankController@updateInventory
+  GET|HEAD        api/blood-bank/transfusions .............................. API\BloodBankController@indexTransfusions
+  POST            api/blood-bank/transfusions ............................... API\BloodBankController@storeTransfusion
+  GET|HEAD        api/blood-bank/transfusions/{id} ........................... API\BloodBankController@showTransfusion
+  PUT             api/blood-bank/transfusions/{id} ......................... API\BloodBankController@updateTransfusion
+  GET|HEAD        api/branches ........................................... branches.index ΓÇ║ API\BranchController@index
+  POST            api/branches ........................................... branches.store ΓÇ║ API\BranchController@store
+  GET|HEAD        api/branches/public ......................................... API\BranchController@getActiveBranches
+  GET|HEAD        api/branches/{branch} .................................... branches.show ΓÇ║ API\BranchController@show
+  PUT|PATCH       api/branches/{branch} ................................ branches.update ΓÇ║ API\BranchController@update
+  DELETE          api/branches/{branch} .............................. branches.destroy ΓÇ║ API\BranchController@destroy
+  GET|HEAD        api/branches/{branch}/fees .............................. API\AppointmentFeeController@getBranchFees
+  GET|HEAD        api/cashier/daily-summary .................................... API\CashierController@getDailySummary
+  GET|HEAD        api/cashier/dashboard ........................................... API\CashierController@getDashboard
+  GET|HEAD        api/cashier/invoices ............................................. API\CashierController@getInvoices
+  GET|HEAD        api/cashier/outstanding-debts ............................ API\CashierController@getOutstandingDebts
+  GET|HEAD        api/cashier/patient/{patient}/charges ...................... API\CashierController@getPatientCharges
+  GET|HEAD        api/cashier/patient/{patient}/debt-info ................... API\CashierController@getPatientDebtInfo
+  GET|HEAD        api/cashier/payment-history ................................ API\CashierController@getPaymentHistory
+  GET|HEAD        api/cashier/pending-payments .............................. API\CashierController@getPendingPayments
+  GET|HEAD        api/cashier/pending-payments/all ....................... API\CashierController@getAllPendingPayments
+  POST            api/cashier/process-payment ................................... API\CashierController@processPayment
+  POST            api/cashier/process-payment-for-charges ............. API\CashierController@processPaymentForCharges
+  POST            api/cashier/search-patient ..................................... API\CashierController@searchPatient
+  POST            api/cashier/shift-handover ..................................... API\CashierController@shiftHandover
+  GET|HEAD        api/cashier/statistics ......................................... API\CashierController@getStatistics
+  GET|HEAD        api/chat/conversations ......................................... API\ChatController@getConversations
+  POST            api/chat/conversations/start .................................. API\ChatController@startConversation
+  POST            api/chat/conversations/support ......................... API\ChatController@startSupportConversation
+  GET|HEAD        api/chat/conversations/{conversation}/messages ...................... API\ChatController@getMessages
+  POST            api/chat/messages ................................................... API\ChatController@sendMessage
+  POST            api/chat/messages/mark-read .................................. API\ChatController@markMessagesAsRead
+  POST            api/chat/upload-attachment ..................................... API\ChatController@uploadAttachment
+  GET|HEAD        api/complaints ................................ api.complaints.index ΓÇ║ API\ComplaintController@index
+  POST            api/complaints ................................ api.complaints.store ΓÇ║ API\ComplaintController@store
+  GET|HEAD        api/complaints/statistics ....................................... API\ComplaintController@statistics
+  GET|HEAD        api/complaints/{complaint} ...................... api.complaints.show ΓÇ║ API\ComplaintController@show
+  PUT|PATCH       api/complaints/{complaint} .................. api.complaints.update ΓÇ║ API\ComplaintController@update
+  DELETE          api/complaints/{complaint} ................ api.complaints.destroy ΓÇ║ API\ComplaintController@destroy
+  GET|HEAD        api/consultation-templates api.consultation-templates.index ΓÇ║ API\ConsultationTemplateController@inΓÇª
+  POST            api/consultation-templates api.consultation-templates.store ΓÇ║ API\ConsultationTemplateController@stΓÇª
+  GET|HEAD        api/consultation-templates/specialties/list ...... API\ConsultationTemplateController@getSpecialties
+  GET|HEAD        api/consultation-templates/{consultation_template} api.consultation-templates.show ΓÇ║ API\ConsultatiΓÇª
+  PUT|PATCH       api/consultation-templates/{consultation_template} api.consultation-templates.update ΓÇ║ API\ConsultaΓÇª
+  DELETE          api/consultation-templates/{consultation_template} api.consultation-templates.destroy ΓÇ║ API\ConsultΓÇª
+  GET|HEAD        api/consultations ....................... api.consultations.index ΓÇ║ API\ConsultationController@index
+  POST            api/consultations ....................... api.consultations.store ΓÇ║ API\ConsultationController@store
+  POST            api/consultations/call-next ........................ API\ConsultationController@callNextConsultation
+  GET|HEAD        api/consultations/doctor/completed ............ API\ConsultationController@getCompletedConsultations
+  GET|HEAD        api/consultations/doctor/queue ........................... API\ConsultationController@getDoctorQueue
+  GET|HEAD        api/consultations/doctor/{doctorId} .............. API\ConsultationController@getDoctorConsultations
+  GET|HEAD        api/consultations/ongoing ....................................... API\ConsultationController@ongoing
+  GET|HEAD        api/consultations/statistics .............................. API\ConsultationController@getStatistics
+  GET|HEAD        api/consultations/today ........................................... API\ConsultationController@today
+  GET|HEAD        api/consultations/{consultation} .......... api.consultations.show ΓÇ║ API\ConsultationController@show
+  PUT|PATCH       api/consultations/{consultation} ...... api.consultations.update ΓÇ║ API\ConsultationController@update
+  DELETE          api/consultations/{consultation} .... api.consultations.destroy ΓÇ║ API\ConsultationController@destroy
+  GET|HEAD        api/consultations/{consultation}/diagnoses ........................... API\DiagnosisController@index
+  POST            api/consultations/{consultation}/diagnoses ........................... API\DiagnosisController@store
+  GET|HEAD        api/consultations/{consultation}/diagnoses/{diagnosis} ................ API\DiagnosisController@show
+  PUT             api/consultations/{consultation}/diagnoses/{diagnosis} .............. API\DiagnosisController@update
+  DELETE          api/consultations/{consultation}/diagnoses/{diagnosis} ............. API\DiagnosisController@destroy
+  POST            api/consultations/{consultation}/diagnoses/{diagnosis}/mark-primary API\DiagnosisController@markAsPΓÇª
+  POST            api/consultations/{consultation}/diagnosis ................. API\ConsultationController@addDiagnosis
+  GET|HEAD        api/consultations/{consultation}/follow-ups ........................... API\FollowUpController@index
+  POST            api/consultations/{consultation}/follow-ups ........................... API\FollowUpController@store
+  GET|HEAD        api/consultations/{consultation}/follow-ups/{followUp} ................. API\FollowUpController@show
+  PUT             api/consultations/{consultation}/follow-ups/{followUp} ............... API\FollowUpController@update
+  DELETE          api/consultations/{consultation}/follow-ups/{followUp} .............. API\FollowUpController@destroy
+  POST            api/consultations/{consultation}/follow-ups/{followUp}/complete API\FollowUpController@markAsCompleΓÇª
+  POST            api/consultations/{consultation}/follow-ups/{followUp}/reschedule API\FollowUpController@reschedule
+  POST            api/consultations/{consultation}/intervention ........... API\ConsultationController@addIntervention
+  GET|HEAD        api/consultations/{consultation}/interventions ........ API\ConsultationInterventionController@index
+  POST            api/consultations/{consultation}/interventions ........ API\ConsultationInterventionController@store
+  GET|HEAD        api/consultations/{consultation}/interventions/by-type API\ConsultationInterventionController@getByΓÇª
+  GET|HEAD        api/consultations/{consultation}/interventions/{intervention} API\ConsultationInterventionControlleΓÇª
+  PUT             api/consultations/{consultation}/interventions/{intervention} API\ConsultationInterventionControlleΓÇª
+  DELETE          api/consultations/{consultation}/interventions/{intervention} API\ConsultationInterventionControlleΓÇª
+  POST            api/consultations/{consultation}/interventions/{intervention}/complete API\ConsultationInterventionΓÇª
+  GET|HEAD        api/consultations/{consultation}/notes .................................... API\NoteController@index
+  POST            api/consultations/{consultation}/notes .................................... API\NoteController@store
+  GET|HEAD        api/consultations/{consultation}/notes/urgent ......................... API\NoteController@getUrgent
+  GET|HEAD        api/consultations/{consultation}/notes/{note} .............................. API\NoteController@show
+  PUT             api/consultations/{consultation}/notes/{note} ............................ API\NoteController@update
+  DELETE          api/consultations/{consultation}/notes/{note} ........................... API\NoteController@destroy
+  GET|HEAD        api/consultations/{consultation}/referrals ............................ API\ReferralController@index
+  POST            api/consultations/{consultation}/referrals ............................ API\ReferralController@store
+  GET|HEAD        api/consultations/{consultation}/referrals/{referral} .................. API\ReferralController@show
+  PUT             api/consultations/{consultation}/referrals/{referral} ................ API\ReferralController@update
+  DELETE          api/consultations/{consultation}/referrals/{referral} ............... API\ReferralController@destroy
+  POST            api/consultations/{consultation}/referrals/{referral}/accept ......... API\ReferralController@accept
+  POST            api/consultations/{consultation}/referrals/{referral}/complete ..... API\ReferralController@complete
+  GET|HEAD        api/consultations/{consultation}/scans ......................... API\ConsultationController@getScans
+  POST            api/consultations/{consultation}/scans ....................... API\ConsultationController@createScan
+  PUT             api/consultations/{consultation}/scans/{scan} ................ API\ConsultationController@updateScan
+  DELETE          api/consultations/{consultation}/scans/{scan} ................ API\ConsultationController@deleteScan
+  POST            api/consultations/{consultation}/vitals ....................... API\ConsultationController@addVitals
+  GET|HEAD        api/consultations/{id} ............................................. API\ConsultationController@show
+  POST            api/consultations/{id}/complete ................. API\ConsultationController@completeOPDConsultation
+  GET|HEAD        api/crash-cart/inventory ............................. API\EmergencyController@getCrashCartInventory
+  POST            api/crash-cart/{cart}/update-item ...................... API\EmergencyController@updateCrashCartItem
+  GET|HEAD        api/dashboard/accountant ............................ API\DashboardController@getAccountantDashboard
+  GET|HEAD        api/dashboard/data ........................................ API\DashboardController@getDashboardData
+  GET|HEAD        api/dashboard/department-performance .............. API\DashboardController@getDepartmentPerformance
+  GET|HEAD        api/dashboard/doctor .................................... API\DashboardController@getDoctorDashboard
+  GET|HEAD        api/dashboard/lab-technician ..................... API\DashboardController@getLabTechnicianDashboard
+  GET|HEAD        api/dashboard/nurse ...................................... API\DashboardController@getNurseDashboard
+  GET|HEAD        api/dashboard/patient-statistics ...................... API\DashboardController@getPatientStatistics
+  GET|HEAD        api/dashboard/pharmacist ............................ API\DashboardController@getPharmacistDashboard
+  GET|HEAD        api/dashboard/recent-appointments .................... API\DashboardController@getRecentAppointments
+  GET|HEAD        api/dashboard/receptionist ........................ API\DashboardController@getReceptionistDashboard
+  GET|HEAD        api/dashboard/revenue-analytics ........................ API\DashboardController@getRevenueAnalytics
+  GET|HEAD        api/dashboard/stats ............................................... API\DashboardController@getStats
+  GET|HEAD        api/debtors ......................................... api.debtors.index ΓÇ║ API\DebtorController@index
+  POST            api/debtors ......................................... api.debtors.store ΓÇ║ API\DebtorController@store
+  POST            api/debtors/bulk-update ............................................ API\DebtorController@bulkUpdate
+  POST            api/debtors/record-payment ...................................... API\DebtorController@recordPayment
+  GET|HEAD        api/debtors/report ..................................................... API\DebtorController@report
+  POST            api/debtors/send-reminders ...................................... API\DebtorController@sendReminders
+  GET|HEAD        api/debtors/statistics .......................................... API\DebtorController@getStatistics
+  GET|HEAD        api/debtors/{debtor} .................................. api.debtors.show ΓÇ║ API\DebtorController@show
+  PUT|PATCH       api/debtors/{debtor} .............................. api.debtors.update ΓÇ║ API\DebtorController@update
+  DELETE          api/debtors/{debtor} ............................ api.debtors.destroy ΓÇ║ API\DebtorController@destroy
+  GET|HEAD        api/debtors/{debtor}/outstanding-invoices ................. API\DebtorController@outstandingInvoices
+  GET|HEAD        api/debtors/{debtor}/payment-history ........................... API\DebtorController@paymentHistory
+  POST            api/debtors/{debtor}/update-status ............................... API\DebtorController@updateStatus
+  GET|HEAD        api/doctor-schedules ................... doctor-schedules.index ΓÇ║ API\DoctorScheduleController@index
+  POST            api/doctor-schedules ................... doctor-schedules.store ΓÇ║ API\DoctorScheduleController@store
+  GET|HEAD        api/doctor-schedules/available-slots ................ API\DoctorScheduleController@getAvailableSlots
+  POST            api/doctor-schedules/generate-slots ..................... API\DoctorScheduleController@generateSlots
+  GET|HEAD        api/doctor-schedules/weekly-schedule ................ API\DoctorScheduleController@getWeeklySchedule
+  GET|HEAD        api/doctor-schedules/{doctor_schedule} ... doctor-schedules.show ΓÇ║ API\DoctorScheduleController@show
+  PUT|PATCH       api/doctor-schedules/{doctor_schedule} doctor-schedules.update ΓÇ║ API\DoctorScheduleController@update
+  DELETE          api/doctor-schedules/{doctor_schedule} doctor-schedules.destroy ΓÇ║ API\DoctorScheduleController@destΓÇª
+  GET|HEAD        api/doctors/{doctor}/availability .................. API\AppointmentController@getDoctorAvailability
+  GET|HEAD        api/doctors/{doctor}/fees ............................... API\AppointmentFeeController@getDoctorFees
+  GET|HEAD        api/doctors/{id}/detail ......................................... API\UserController@getDoctorDetail
+  POST            api/drug-orders/{order}/dispense ......................... API\PharmacyController@dispenseMedication
+  GET|HEAD        api/drugs ............................................................. API\PharmacyController@index
+  POST            api/drugs ............................................................. API\PharmacyController@store
+  GET|HEAD        api/drugs/categories .......................................... API\PharmacyController@getCategories
+  GET|HEAD        api/drugs/search ................................................ API\PharmacyController@searchDrugs
+  GET|HEAD        api/drugs/stock ....................................................... API\PharmacyController@stock
+  GET|HEAD        api/drugs/{drug} ....................................................... API\PharmacyController@show
+  PUT             api/drugs/{drug} ..................................................... API\PharmacyController@update
+  DELETE          api/drugs/{drug} .................................................... API\PharmacyController@destroy
+  POST            api/drugs/{drug}/stock .......................................... API\PharmacyController@updateStock
+  POST            api/ecommerce/orders/paystack/initialize ............ API\ECommerceController@initializeOrderPayment
+  POST            api/ecommerce/orders/paystack/process .................. API\ECommerceController@processOrderPayment
+  POST            api/ecommerce/orders/{orderId}/complete ...................... API\ECommerceController@completeOrder
+  GET|HEAD        api/ecommerce/orders/{order}/payment/verify ............. API\ECommerceController@verifyOrderPayment
+  POST            api/ecommerce/pharmacy-visit ........................... API\ECommerceController@createPharmacyVisit
+  GET|HEAD        api/ecommerce/statistics ..................................... API\ECommerceController@getStatistics
+  GET|HEAD        api/emergency-alerts ............................................ API\EmergencyAlertController@index
+  POST            api/emergency-alerts ............................................ API\EmergencyAlertController@store
+  GET|HEAD        api/emergency-alerts/active ........................... API\EmergencyAlertController@getActiveAlerts
+  GET|HEAD        api/emergency-alerts/statistics emergency-alerts.statistics ΓÇ║ API\EmergencyAlertController@getAlertΓÇª
+  POST            api/emergency-alerts/{alert}/acknowledge .................. API\EmergencyAlertController@acknowledge
+  GET|HEAD        api/emergency-alerts/{id} ........................................ API\EmergencyAlertController@show
+  POST            api/emergency-alerts/{id}/acknowledge ..................... API\EmergencyAlertController@acknowledge
+  POST            api/emergency-alerts/{id}/resolve ............................. API\EmergencyAlertController@resolve
+  GET|HEAD        api/emergency-contacts ........................................ API\EmergencyContactController@index
+  GET|HEAD        api/emergency-contacts/branch/{branchId} . API\EmergencyContactController@getBranchEmergencyContacts
+  POST            api/emergency-contacts/branch/{branchId} API\EmergencyContactController@updateBranchEmergencyContacΓÇª
+  POST            api/emergency-queue/call-next ..................... API\EmergencyController@callNextEmergencyPatient
+  GET|HEAD        api/emergency-queue/status ......................... API\EmergencyController@getEmergencyQueueStatus
+  GET|HEAD        api/emergency-visits ................................................. API\EmergencyController@index
+  POST            api/emergency-visits ................................................. API\EmergencyController@store
+  GET|HEAD        api/emergency-visits/{emergency_visit} ................................ API\EmergencyController@show
+  PUT             api/emergency-visits/{emergency_visit} .............................. API\EmergencyController@update
+  DELETE          api/emergency-visits/{emergency_visit} ............................. API\EmergencyController@destroy
+  POST            api/emergency-visits/{visit}/intervention .................. API\EmergencyController@addIntervention
+  POST            api/emergency-visits/{visit}/triage ........................... API\EmergencyController@updateTriage
+  GET|HEAD        api/emergency/statistics ..................................... API\EmergencyController@getStatistics
+  GET|HEAD        api/eye-services ............................... eye-services.index ΓÇ║ API\EyeServiceController@index
+  POST            api/eye-services ............................... eye-services.store ΓÇ║ API\EyeServiceController@store
+  GET|HEAD        api/eye-services/categories .................................... API\EyeServiceController@categories
+  GET|HEAD        api/eye-services/nhis-covered ................................. API\EyeServiceController@nhisCovered
+  GET|HEAD        api/eye-services/service-types ............................... API\EyeServiceController@serviceTypes
+  GET|HEAD        api/eye-services/statistics .................................... API\EyeServiceController@statistics
+  POST            api/eye-services/{eyeService}/toggle-status .................. API\EyeServiceController@toggleStatus
+  GET|HEAD        api/eye-services/{eye_service} ................... eye-services.show ΓÇ║ API\EyeServiceController@show
+  PUT|PATCH       api/eye-services/{eye_service} ............... eye-services.update ΓÇ║ API\EyeServiceController@update
+  DELETE          api/eye-services/{eye_service} ............. eye-services.destroy ΓÇ║ API\EyeServiceController@destroy
+  GET|HEAD        api/eye-test-requests ................. eye-test-requests.index ΓÇ║ API\EyeTestRequestController@index
+  POST            api/eye-test-requests ................. eye-test-requests.store ΓÇ║ API\EyeTestRequestController@store
+  POST            api/eye-test-requests/create-from-appointment ... API\EyeTestRequestController@createFromAppointment
+  GET|HEAD        api/eye-test-requests/dashboard ............................. API\EyeTestRequestController@dashboard
+  GET|HEAD        api/eye-test-requests/download-pdf .................. API\EyeTestRequestController@downloadPdfReport
+  POST            api/eye-test-requests/generate-summary-pdf ... API\EyeTestRequestController@generateSummaryPdfReport
+  GET|HEAD        api/eye-test-requests/statistics ........................... API\EyeTestRequestController@statistics
+  POST            api/eye-test-requests/{eyeTestRequest}/cancel .................. API\EyeTestRequestController@cancel
+  POST            api/eye-test-requests/{eyeTestRequest}/complete .............. API\EyeTestRequestController@complete
+  POST            api/eye-test-requests/{eyeTestRequest}/generate-custom-pdf API\EyeTestRequestController@generateCusΓÇª
+  POST            api/eye-test-requests/{eyeTestRequest}/generate-pdf . API\EyeTestRequestController@generatePdfReport
+  POST            api/eye-test-requests/{eyeTestRequest}/mark-quality-control-passed API\EyeTestRequestController@marΓÇª
+  POST            api/eye-test-requests/{eyeTestRequest}/mark-results-entered API\EyeTestRequestController@markResultΓÇª
+  POST            api/eye-test-requests/{eyeTestRequest}/mark-results-verified API\EyeTestRequestController@markResulΓÇª
+  GET|HEAD        api/eye-test-requests/{eyeTestRequest}/results ........ API\EyeTestResultController@getByTestRequest
+  POST            api/eye-test-requests/{eyeTestRequest}/start .................... API\EyeTestRequestController@start
+  GET|HEAD        api/eye-test-requests/{eye_test_request} eye-test-requests.show ΓÇ║ API\EyeTestRequestController@show
+  PUT|PATCH       api/eye-test-requests/{eye_test_request} eye-test-requests.update ΓÇ║ API\EyeTestRequestController@upΓÇª
+  DELETE          api/eye-test-requests/{eye_test_request} eye-test-requests.destroy ΓÇ║ API\EyeTestRequestController@dΓÇª
+  GET|HEAD        api/eye-test-results .................... eye-test-results.index ΓÇ║ API\EyeTestResultController@index
+  POST            api/eye-test-results .................... eye-test-results.store ΓÇ║ API\EyeTestResultController@store
+  GET|HEAD        api/eye-test-results/abnormal ....................... API\EyeTestResultController@getAbnormalResults
+  GET|HEAD        api/eye-test-results/critical ....................... API\EyeTestResultController@getCriticalResults
+  GET|HEAD        api/eye-test-results/statistics ............................. API\EyeTestResultController@statistics
+  POST            api/eye-test-results/{eyeTestResult}/mark-repeat ......... API\EyeTestResultController@markForRepeat
+  POST            api/eye-test-results/{eyeTestResult}/verify ..................... API\EyeTestResultController@verify
+  GET|HEAD        api/eye-test-results/{eye_test_result} .... eye-test-results.show ΓÇ║ API\EyeTestResultController@show
+  PUT|PATCH       api/eye-test-results/{eye_test_result} eye-test-results.update ΓÇ║ API\EyeTestResultController@update
+  DELETE          api/eye-test-results/{eye_test_result} eye-test-results.destroy ΓÇ║ API\EyeTestResultController@destrΓÇª
+  GET|HEAD        api/files ........................................................ API\FileUploadController@getFiles
+  GET|HEAD        api/files/statistics ........................................ API\FileUploadController@getStatistics
+  POST            api/files/upload ................................................... API\FileUploadController@upload
+  POST            api/files/upload-multiple .................................. API\FileUploadController@uploadMultiple
+  DELETE          api/files/{file} .................................................. API\FileUploadController@destroy
+  GET|HEAD        api/files/{file}/download ........................................ API\FileUploadController@download
+  GET|HEAD        api/files/{file}/url ........................................... API\FileUploadController@getFileUrl
+  GET|HEAD        api/follow-ups/overdue ........................................... API\FollowUpController@getOverdue
+  GET|HEAD        api/ghs-reports ...................................................... API\GhsReportController@index
+  POST            api/ghs-reports ...................................................... API\GhsReportController@store
+  POST            api/ghs-reports/generate-auto ........................... API\GhsReportController@generateAutoReport
+  GET|HEAD        api/ghs-reports/{id} .................................................. API\GhsReportController@show
+  PUT             api/ghs-reports/{id} ................................................ API\GhsReportController@update
+  DELETE          api/ghs-reports/{id} ............................................... API\GhsReportController@destroy
+  POST            api/ghs-reports/{id}/review ................................... API\GhsReportController@reviewReport
+  POST            api/ghs-reports/{id}/submit ................................... API\GhsReportController@submitReport
+  GET|HEAD        api/health ......................................................................................... 
+  GET|HEAD        api/icu .................................................................... API\IcuController@index
+  POST            api/icu .................................................................... API\IcuController@store
+  GET|HEAD        api/icu/active-patients ........................................ API\IcuController@getActivePatients
+  GET|HEAD        api/icu/critical-patients .................................... API\IcuController@getCriticalPatients
+  GET|HEAD        api/icu/{id} ................................................................ API\IcuController@show
+  PUT             api/icu/{id} .............................................................. API\IcuController@update
+  DELETE          api/icu/{id} ............................................................. API\IcuController@destroy
+  POST            api/icu/{id}/discharge ................................................. API\IcuController@discharge
+  PUT             api/icu/{id}/vitals ................................................. API\IcuController@updateVitals
+  POST            api/insurance-claims ........................................... API\InsuranceController@submitClaim
+  GET|HEAD        api/insurance-claims ............................................. API\InsuranceController@getClaims
+  PUT             api/insurance-claims/{claim}/status ...................... API\InsuranceController@updateClaimStatus
+  POST            api/insurance-policies ........................................ API\InsuranceController@createPolicy
+  GET|HEAD        api/insurance-providers .................. insurance-providers.index ΓÇ║ API\InsuranceController@index
+  POST            api/insurance-providers .................. insurance-providers.store ΓÇ║ API\InsuranceController@store
+  GET|HEAD        api/insurance-providers/{insurance_provider} insurance-providers.show ΓÇ║ API\InsuranceController@show
+  PUT|PATCH       api/insurance-providers/{insurance_provider} insurance-providers.update ΓÇ║ API\InsuranceController@uΓÇª
+  DELETE          api/insurance-providers/{insurance_provider} insurance-providers.destroy ΓÇ║ API\InsuranceController@ΓÇª
+  GET|HEAD        api/insurance-providers/{provider}/coverage-policies ... API\InsuranceController@getCoveragePolicies
+  GET|HEAD        api/insurance/analytics ....................................... API\InsuranceController@getAnalytics
+  POST            api/insurance/calculate-coverage ......................... API\InsuranceController@calculateCoverage
+  POST            api/insurance/coverage-policies ....................... API\InsuranceController@createCoveragePolicy
+  GET|HEAD        api/insurance/dashboard ................................... API\InsuranceController@getDashboardData
+  POST            api/insurance/process-claim ................................... API\InsuranceController@processClaim
+  POST            api/insurance/reports ....................................... API\InsuranceController@generateReport
+  GET|HEAD        api/insurance/service-categories ...................... API\InsuranceController@getServiceCategories
+  GET|HEAD        api/insurance/statistics ..................................... API\InsuranceController@getStatistics
+  POST            api/insurance/validate-coverage ........................... API\InsuranceController@validateCoverage
+  GET|HEAD        api/invoices ...................................... api.invoices.index ΓÇ║ API\BillingController@index
+  POST            api/invoices ...................................... api.invoices.store ΓÇ║ API\BillingController@store
+  POST            api/invoices/generate-from-consultation/{consultation} API\BillingController@generateFromConsultatiΓÇª
+  GET|HEAD        api/invoices/overdue ...................................... API\BillingController@getOverdueInvoices
+  GET|HEAD        api/invoices/{invoice} .............................. api.invoices.show ΓÇ║ API\BillingController@show
+  PUT|PATCH       api/invoices/{invoice} .......................... api.invoices.update ΓÇ║ API\BillingController@update
+  DELETE          api/invoices/{invoice} ........................ api.invoices.destroy ΓÇ║ API\BillingController@destroy
+  POST            api/invoices/{invoice}/payments ................................... API\BillingController@addPayment
+  GET|HEAD        api/invoices/{invoice}/pdf ....................................... API\BillingController@generatePDF
+  GET|HEAD        api/invoices/{invoice}/receipt-pdf ........................ API\BillingController@generateReceiptPDF
+  PATCH           api/invoices/{invoice}/status ................................... API\BillingController@updateStatus
+  GET|HEAD        api/jitsi/settings ......................................... API\JitsiSettingsController@getSettings
+  PUT             api/jitsi/settings ...................................... API\JitsiSettingsController@updateSettings
+  GET|HEAD        api/jitsi/test-connection ............................... API\JitsiSettingsController@testConnection
+  GET|HEAD        api/lab/activity/recent ........................................ API\LabController@getRecentActivity
+  GET|HEAD        api/lab/archive ....................................................... API\LabController@getArchive
+  GET|HEAD        api/lab/archive/patient/{patientId} ............................ API\LabController@getPatientArchive
+  GET|HEAD        api/lab/archive/statistics .................................. API\LabController@getArchiveStatistics
+  GET|HEAD        api/lab/categories ................................................. API\LabController@getCategories
+  GET|HEAD        api/lab/categories-management ................................... API\LabController@getLabCategories
+  POST            api/lab/categories-management ..................................... API\LabController@createCategory
+  GET|HEAD        api/lab/categories-management/{id} ................................ API\LabController@getLabCategory
+  PUT             api/lab/categories-management/{id} ............................. API\LabController@updateLabCategory
+  DELETE          api/lab/categories-management/{id} ............................. API\LabController@deleteLabCategory
+  GET|HEAD        api/lab/equipment-calibrations .......................... API\LabController@getEquipmentCalibrations
+  POST            api/lab/equipment-calibrations ........................ API\LabController@createEquipmentCalibration
+  PUT             api/lab/equipment-calibrations/{id} ................... API\LabController@updateEquipmentCalibration
+  DELETE          api/lab/equipment-calibrations/{id} ................... API\LabController@deleteEquipmentCalibration
+  GET|HEAD        api/lab/inventory/consumables ............................ API\LabInventoryController@getConsumables
+  POST            api/lab/inventory/consumables .......................... API\LabInventoryController@createConsumable
+  GET|HEAD        api/lab/inventory/consumables/stats .................. API\LabInventoryController@getConsumableStats
+  PUT             api/lab/inventory/consumables/{id} ..................... API\LabInventoryController@updateConsumable
+  DELETE          api/lab/inventory/consumables/{id} ..................... API\LabInventoryController@deleteConsumable
+  GET|HEAD        api/lab/inventory/equipment ................................ API\LabInventoryController@getEquipment
+  POST            api/lab/inventory/equipment ............................. API\LabInventoryController@createEquipment
+  GET|HEAD        api/lab/inventory/equipment/stats ..................... API\LabInventoryController@getEquipmentStats
+  PUT             api/lab/inventory/equipment/{id} ........................ API\LabInventoryController@updateEquipment
+  DELETE          api/lab/inventory/equipment/{id} ........................ API\LabInventoryController@deleteEquipment
+  GET|HEAD        api/lab/inventory/reagents .................................. API\LabInventoryController@getReagents
+  POST            api/lab/inventory/reagents ................................ API\LabInventoryController@createReagent
+  GET|HEAD        api/lab/inventory/reagents/stats ........................ API\LabInventoryController@getReagentStats
+  PUT             api/lab/inventory/reagents/{id} ........................... API\LabInventoryController@updateReagent
+  DELETE          api/lab/inventory/reagents/{id} ........................... API\LabInventoryController@deleteReagent
+  GET|HEAD        api/lab/inventory/stats ............................... API\LabInventoryController@getInventoryStats
+  GET|HEAD        api/lab/inventory/suppliers ................................ API\LabInventoryController@getSuppliers
+  POST            api/lab/inventory/suppliers .............................. API\LabInventoryController@createSupplier
+  GET|HEAD        api/lab/inventory/suppliers/{id} ............................ API\LabInventoryController@getSupplier
+  PUT             api/lab/inventory/suppliers/{id} ......................... API\LabInventoryController@updateSupplier
+  DELETE          api/lab/inventory/suppliers/{id} ......................... API\LabInventoryController@deleteSupplier
+  GET|HEAD        api/lab/inventory/transactions .......................... API\LabInventoryController@getTransactions
+  POST            api/lab/lab-queue/call-next ................................... API\LabController@callNextLabPatient
+  GET|HEAD        api/lab/lab-queue/status ....................................... API\LabController@getLabQueueStatus
+  POST            api/lab/lab-queue/{queueId}/start-serving ................. API\LabController@startServingLabPatient
+  POST            api/lab/lab-requests/{labRequest}/results ........................... API\LabController@storeResults
+  GET|HEAD        api/lab/lab-requests/{labRequest}/results ............................. API\LabController@getResults
+  GET|HEAD        api/lab/lab-test-types ........................................ API\LabController@getTestTypesLegacy
+  GET|HEAD        api/lab/lab-test-types/categories .............................. API\LabController@getTestCategories
+  GET|HEAD        api/lab/patient-requests ...................................... API\LabController@getPatientRequests
+  GET|HEAD        api/lab/patient-results ........................................ API\LabController@getPatientResults
+  GET|HEAD        api/lab/patient-statistics ............................... API\LabController@getPatientLabStatistics
+  GET|HEAD        api/lab/quality-control ................................. API\LabController@getQualityControlRecords
+  POST            api/lab/quality-control ............................... API\LabController@createQualityControlRecord
+  GET|HEAD        api/lab/quality-control/pdf ............................ API\LabController@generateQualityControlPdf
+  PUT             api/lab/quality-control/{id} .......................... API\LabController@updateQualityControlRecord
+  DELETE          api/lab/quality-control/{id} .......................... API\LabController@deleteQualityControlRecord
+  GET|HEAD        api/lab/report-templates ...................................... API\LabController@getReportTemplates
+  GET|HEAD        api/lab/reports .................................................... API\LabController@getLabReports
+  POST            api/lab/reports/generate .......................................... API\LabController@generateReport
+  GET|HEAD        api/lab/reports/{id}/download ..................................... API\LabController@downloadReport
+  GET|HEAD        api/lab/requests .......................................... requests.index ΓÇ║ API\LabController@index
+  POST            api/lab/requests .......................................... requests.store ΓÇ║ API\LabController@store
+  POST            api/lab/requests/{requestId}/approve .......................... API\LabController@approveTestResults
+  GET|HEAD        api/lab/requests/{requestId}/critical-pdf ............. API\LabController@generateCriticalResultsPdf
+  GET|HEAD        api/lab/requests/{requestId}/diagnostic-pdf .......... API\LabController@generateDiagnosticReportPdf
+  GET|HEAD        api/lab/requests/{requestId}/pdf .......................... API\LabController@generateTestResultsPdf
+  GET|HEAD        api/lab/requests/{requestId}/results .............................. API\LabController@getTestResults
+  POST            api/lab/requests/{requestId}/results ............................ API\LabController@enterTestResults
+  GET|HEAD        api/lab/requests/{requestId}/templates ....................... API\LabController@getRequestTemplates
+  POST            api/lab/requests/{requestId}/templates/{templateId}/assign-technician API\LabController@assignTechnΓÇª
+  GET|HEAD        api/lab/requests/{requestId}/templates/{templateId}/dynamic-pdf API\LabController@generateDynamicTeΓÇª
+  GET|HEAD        api/lab/requests/{requestId}/templates/{templateId}/pdf API\LabController@generateTemplateResultPdf
+  POST            api/lab/requests/{requestId}/templates/{templateId}/results . API\LabController@enterTemplateResults
+  POST            api/lab/requests/{requestId}/verify ............................ API\LabController@verifyTestResults
+  GET|HEAD        api/lab/requests/{request} .................................. requests.show ΓÇ║ API\LabController@show
+  PUT|PATCH       api/lab/requests/{request} .............................. requests.update ΓÇ║ API\LabController@update
+  DELETE          api/lab/requests/{request} ............................ requests.destroy ΓÇ║ API\LabController@destroy
+  GET|HEAD        api/lab/results ................................................ API\LabController@getPatientResults
+  GET|HEAD        api/lab/results/abnormal ...................................... API\LabController@getAbnormalResults
+  GET|HEAD        api/lab/results/critical ...................................... API\LabController@getCriticalResults
+  PUT             api/lab/results/verify ......................................... API\LabController@verifyTestResults
+  GET|HEAD        api/lab/results/{id} ........................................ API\LabController@getLabRequestDetails
+  GET|HEAD        api/lab/statistics ................................................. API\LabController@getStatistics
+  GET|HEAD        api/lab/template-assignments .............................. API\LabController@getTemplateAssignments
+  POST            api/lab/template-assignments ............................ API\LabController@createTemplateAssignment
+  DELETE          api/lab/template-assignments/{id} ....................... API\LabController@deleteTemplateAssignment
+  POST            api/lab/templates ................................................. API\LabController@createTemplate
+  GET|HEAD        api/lab/templates ................................................... API\LabController@getTemplates
+  GET|HEAD        api/lab/templates/{id} ............................................... API\LabController@getTemplate
+  PUT             api/lab/templates/{id} ............................................ API\LabController@updateTemplate
+  DELETE          api/lab/templates/{id} ............................................ API\LabController@deleteTemplate
+  GET|HEAD        api/lab/templates/{id}/parameters .......................... API\LabController@getTemplateParameters
+  GET|HEAD        api/lab/templates/{templateId}/results-form ............... API\LabController@getTemplateResultsForm
+  GET|HEAD        api/lab/test-types .................................................. API\LabController@getTestTypes
+  GET|HEAD        api/lab/tests-management ................................................ API\LabController@getTests
+  POST            api/lab/tests-management .............................................. API\LabController@createTest
+  GET|HEAD        api/lab/tests-management/{id} ......................................... API\LabController@getLabTest
+  PUT             api/lab/tests-management/{id} ...................................... API\LabController@updateLabTest
+  DELETE          api/lab/tests-management/{id} ...................................... API\LabController@deleteLabTest
+  GET|HEAD        api/lab/verification/pending .............................. API\LabController@getPendingVerification
+  POST            api/lab/visits/{visitId}/complete-lab-service .............. API\LabController@completeWalkInService
+  POST            api/lab/visits/{visitId}/lab-request ....................... API\LabController@createFromWalkInVisit
+  GET|HEAD        api/nhis-claims ...................................................... API\NhisClaimController@index
+  POST            api/nhis-claims ...................................................... API\NhisClaimController@store
+  GET|HEAD        api/nhis-claims/pending ................................... API\NhisClaimController@getPendingClaims
+  GET|HEAD        api/nhis-claims/queried ................................... API\NhisClaimController@getQueriedClaims
+  GET|HEAD        api/nhis-claims/{id} .................................................. API\NhisClaimController@show
+  PUT             api/nhis-claims/{id} ................................................ API\NhisClaimController@update
+  DELETE          api/nhis-claims/{id} ............................................... API\NhisClaimController@destroy
+  POST            api/nhis-claims/{id}/record-payment .......................... API\NhisClaimController@recordPayment
+  POST            api/nhis-claims/{id}/respond-query .......................... API\NhisClaimController@respondToQuery
+  POST            api/nhis-claims/{id}/submit .................................... API\NhisClaimController@submitClaim
+  POST            api/nhis-claims/{id}/vet .......................................... API\NhisClaimController@vetClaim
+  GET|HEAD        api/notification-preferences ............................ API\NotificationPreferenceController@index
+  PUT             api/notification-preferences ........................... API\NotificationPreferenceController@update
+  POST            api/notification-preferences/check-new-work ...... API\NotificationPreferenceController@checkNewWork
+  GET|HEAD        api/notifications ........................... notifications.index ΓÇ║ API\NotificationController@index
+  POST            api/notifications ........................... notifications.store ΓÇ║ API\NotificationController@store
+  POST            api/notifications/appointment-reminder ........ API\NotificationController@createAppointmentReminder
+  POST            api/notifications/bulk ......................................... API\NotificationController@sendBulk
+  POST            api/notifications/lab-result ................ API\NotificationController@createLabResultNotification
+  POST            api/notifications/mark-all-read ........................... API\NotificationController@markAllAsRead
+  POST            api/notifications/send-to-role ............................... API\NotificationController@sendToRole
+  GET|HEAD        api/notifications/statistics .............................. API\NotificationController@getStatistics
+  GET|HEAD        api/notifications/unread-count ........................... API\NotificationController@getUnreadCount
+  DELETE          api/notifications/{notification} ........ notifications.destroy ΓÇ║ API\NotificationController@destroy
+  GET|HEAD        api/notifications/{notification} .............. notifications.show ΓÇ║ API\NotificationController@show
+  PUT|PATCH       api/notifications/{notification} .......... notifications.update ΓÇ║ API\NotificationController@update
+  PUT             api/notifications/{notification}/read ........................ API\NotificationController@markAsRead
+  POST            api/opd-queue/call-next ..................................... API\QueueController@callNextOPDPatient
+  GET|HEAD        api/opd-queue/status ......................................... API\QueueController@getOPDQueueStatus
+  POST            api/opd-queue/{queueId}/complete-serving .................... API\QueueController@completeOPDServing
+  POST            api/opd-queue/{queueId}/start-serving .......................... API\QueueController@startOPDServing
+  GET|HEAD        api/patient/allergies .................................. API\PatientAllergyController@getMyAllergies
+  GET|HEAD        api/patient/cart ................................................... API\PatientCartController@index
+  DELETE          api/patient/cart ............................................... API\PatientCartController@clearCart
+  POST            api/patient/cart/add ............................................. API\PatientCartController@addItem
+  GET|HEAD        api/patient/cart/summary .................................. API\PatientCartController@getCartSummary
+  DELETE          api/patient/cart/{id} ......................................... API\PatientCartController@removeItem
+  PUT             api/patient/cart/{id}/quantity ............................ API\PatientCartController@updateQuantity
+  GET|HEAD        api/patient/dependents ........................................ API\PatientDependentController@index
+  POST            api/patient/dependents ........................................ API\PatientDependentController@store
+  PUT             api/patient/dependents/{id} .................................. API\PatientDependentController@update
+  DELETE          api/patient/dependents/{id} ................................. API\PatientDependentController@destroy
+  GET|HEAD        api/patient/medical-history ................ API\PatientMedicalHistoryController@getMyMedicalHistory
+  GET|HEAD        api/patient/payment-methods ............................... API\PatientPaymentMethodController@index
+  POST            api/patient/payment-methods ............................... API\PatientPaymentMethodController@store
+  DELETE          api/patient/payment-methods/{id} ........................ API\PatientPaymentMethodController@destroy
+  POST            api/patient/payment-methods/{id}/set-default ......... API\PatientPaymentMethodController@setDefault
+  GET|HEAD        api/patients ...................................... api.patients.index ΓÇ║ API\PatientController@index
+  POST            api/patients ...................................... api.patients.store ΓÇ║ API\PatientController@store
+  GET|HEAD        api/patients-search .................................... API\PatientProfileController@searchPatients
+  POST            api/patients/ensure ............................... API\PatientProfileController@ensurePatientRecord
+  GET|HEAD        api/patients/me ......................................... api.patients.me ΓÇ║ API\PatientController@me
+  PUT             api/patients/me ............................. api.patients.updateMe ΓÇ║ API\PatientController@updateMe
+  GET|HEAD        api/patients/search ............................. api.patients.search ΓÇ║ API\PatientController@search
+  GET|HEAD        api/patients/statistics ................. api.patients.statistics ΓÇ║ API\PatientController@statistics
+  GET|HEAD        api/patients/{patientId}/consultations ..................... API\ConsultationController@getByPatient
+  GET|HEAD        api/patients/{patientId}/prescription-notifications . API\PharmacyController@getPatientNotifications
+  GET|HEAD        api/patients/{patient} .............................. api.patients.show ΓÇ║ API\PatientController@show
+  PUT|PATCH       api/patients/{patient} .......................... api.patients.update ΓÇ║ API\PatientController@update
+  DELETE          api/patients/{patient} ........................ api.patients.destroy ΓÇ║ API\PatientController@destroy
+  GET|HEAD        api/patients/{patient}/allergies ................................ API\PatientAllergyController@index
+  POST            api/patients/{patient}/allergies ................................ API\PatientAllergyController@store
+  GET|HEAD        api/patients/{patient}/allergies/{allergy} ....................... API\PatientAllergyController@show
+  PUT             api/patients/{patient}/allergies/{allergy} ..................... API\PatientAllergyController@update
+  DELETE          api/patients/{patient}/allergies/{allergy} .................... API\PatientAllergyController@destroy
+  GET|HEAD        api/patients/{patient}/billing-statement-pdf ..... API\BillingController@generateBillingStatementPDF
+  GET|HEAD        api/patients/{patient}/comprehensive-profile .. API\PatientProfileController@getComprehensiveProfile
+  GET|HEAD        api/patients/{patient}/diagnoses .............................. API\DiagnosisController@getByPatient
+  GET|HEAD        api/patients/{patient}/emergency-alerts emergency-alerts.patient ΓÇ║ API\EmergencyAlertController@getΓÇª
+  GET|HEAD        api/patients/{patient}/financial-summary .......... API\PatientProfileController@getFinancialSummary
+  GET|HEAD        api/patients/{patient}/insurance-stats ............ API\InsuranceController@getPatientInsuranceStats
+  GET|HEAD        api/patients/{patient}/medical-history ................... API\PatientMedicalHistoryController@index
+  POST            api/patients/{patient}/medical-history ................... API\PatientMedicalHistoryController@store
+  GET|HEAD        api/patients/{patient}/medical-history/active-conditions API\PatientMedicalHistoryController@getActΓÇª
+  GET|HEAD        api/patients/{patient}/medical-history/{history} .......... API\PatientMedicalHistoryController@show
+  PUT             api/patients/{patient}/medical-history/{history} ........ API\PatientMedicalHistoryController@update
+  DELETE          api/patients/{patient}/medical-history/{history} ....... API\PatientMedicalHistoryController@destroy
+  GET|HEAD        api/patients/{patient}/policies ......................... API\InsuranceController@getPatientPolicies
+  GET|HEAD        api/patients/{patient}/test-profile .......... API\PatientProfileController@testComprehensiveProfile
+  GET|HEAD        api/patients/{patient}/timeline .................... API\PatientProfileController@getPatientTimeline
+  GET|HEAD        api/patients/{patient}/vitals ................................ API\VitalsController@getPatientVitals
+  GET|HEAD        api/payments ..................................................... API\BillingController@getPayments
+  GET|HEAD        api/paystack/callback ............. paystack.callback ΓÇ║ API\PaystackWebhookController@handleCallback
+  POST            api/paystack/webhook ................ paystack.webhook ΓÇ║ API\PaystackWebhookController@handleWebhook
+  GET|HEAD        api/permissions .................................................. API\RoleController@getPermissions
+  POST            api/permissions ................................................ API\RoleController@createPermission
+  GET|HEAD        api/permissions/grouped ................................... API\RoleController@getPermissionsGrouped
+  DELETE          api/permissions/{permission} ................................... API\RoleController@deletePermission
+  POST            api/pharmacy-queue/call-next ........................ API\PharmacyController@callNextPharmacyPatient
+  GET|HEAD        api/pharmacy-queue/status ............................ API\PharmacyController@getPharmacyQueueStatus
+  POST            api/pharmacy-visits ..................................... API\PharmacyController@createPharmacyVisit
+  GET|HEAD        api/pharmacy/analytics ............................................ API\PharmacyController@analytics
+  GET|HEAD        api/pharmacy/dispensing-history ........................ API\PharmacyController@getDispensingHistory
+  GET|HEAD        api/pharmacy/orders ....................................... API\PharmacyController@getPharmacyOrders
+  GET|HEAD        api/pharmacy/orders/{id} ............................ API\PharmacyController@getPharmacyOrderDetails
+  PUT             api/pharmacy/orders/{id}/status ................... API\PharmacyController@updatePharmacyOrderStatus
+  GET|HEAD        api/pharmacy/statistics ....................................... API\PharmacyController@getStatistics
+  GET|HEAD        api/pharmacy/stock-alerts .................................... API\PharmacyController@getStockAlerts
+  GET|HEAD        api/pre-authorizations ................................ API\InsuranceController@getPreAuthorizations
+  POST            api/pre-authorizations .............................. API\InsuranceController@createPreAuthorization
+  PUT             api/pre-authorizations/{preAuth}/status ....... API\InsuranceController@updatePreAuthorizationStatus
+  POST            api/prescription-notifications/{notificationId}/mark-read API\PharmacyController@markNotificationAsΓÇª
+  GET|HEAD        api/prescriptions ............................... API\PrescriptionController@getPatientPrescriptions
+  GET|HEAD        api/prescriptions/active ...................................... API\PrescriptionController@getActive
+  POST            api/prescriptions/add-to-cart ..................................... API\PharmacyController@addToCart
+  POST            api/prescriptions/create ................................. API\PharmacyController@createPrescription
+  POST            api/prescriptions/drug-interactions ................. API\PrescriptionController@getDrugInteractions
+  GET|HEAD        api/prescriptions/history .................................... API\PrescriptionController@getHistory
+  GET|HEAD        api/prescriptions/list ..................................... API\PharmacyController@getPrescriptions
+  GET|HEAD        api/prescriptions/medication-adherence ........... API\PrescriptionController@getMedicationAdherence
+  GET|HEAD        api/prescriptions/medication-reminders ........... API\PrescriptionController@getMedicationReminders
+  POST            api/prescriptions/medications/mark-taken .......... API\PrescriptionController@markMedicationAsTaken
+  POST            api/prescriptions/medications/side-effects ............ API\PrescriptionController@reportSideEffects
+  GET|HEAD        api/prescriptions/pending ........................... API\PharmacyController@getPendingPrescriptions
+  POST            api/prescriptions/process-dispensing ...................... API\PharmacyController@processDispensing
+  POST            api/prescriptions/refill-request .......................... API\PrescriptionController@requestRefill
+  GET|HEAD        api/prescriptions/statistics .............................. API\PrescriptionController@getStatistics
+  GET|HEAD        api/prescriptions/{id}/details ....................... API\PharmacyController@getPrescriptionDetails
+  POST            api/prescriptions/{id}/generate-billing ......... API\PharmacyController@generatePrescriptionBilling
+  GET|HEAD        api/prescriptions/{prescriptionId}/check-interactions . API\PharmacyController@checkDrugInteractions
+  GET|HEAD        api/prescriptions/{prescription} ................................... API\PrescriptionController@show
+  GET|HEAD        api/prescriptions/{prescription}/medications ............. API\PrescriptionController@getMedications
+  GET|HEAD        api/prescriptions/{prescription}/pdf ........................ API\PrescriptionController@downloadPdf
+  POST            api/pricing/calculate/consultation .................. API\PricingController@calculateConsultationFee
+  POST            api/pricing/calculate/drug ................................ API\PricingController@calculateDrugPrice
+  POST            api/pricing/calculate/lab-test ......................... API\PricingController@calculateLabTestPrice
+  POST            api/pricing/calculate/service .......................... API\PricingController@calculateServicePrice
+  GET|HEAD        api/pricing/discounts ..................................... API\PricingController@getDiscountSchemes
+  POST            api/pricing/discounts .................................... API\PricingController@storeDiscountScheme
+  POST            api/pricing/rules ........................................... API\PricingController@storePricingRule
+  GET|HEAD        api/pricing/services ....................................... API\PricingController@getServicePricing
+  POST            api/pricing/services ..................................... API\PricingController@storeServicePricing
+  GET|HEAD        api/pricing/services/{serviceId}/rules ....................... API\PricingController@getPricingRules
+  GET|HEAD        api/print-settings ......................................... API\PrintSettingsController@getSettings
+  POST            api/print-settings ............................................... API\PrintSettingsController@store
+  GET|HEAD        api/print-settings/formats .................................. API\PrintSettingsController@getFormats
+  GET|HEAD        api/print-settings/invoices/{id}/preview ................ API\PrintSettingsController@previewInvoice
+  GET|HEAD        api/print-settings/invoices/{id}/print .............. API\PrintSettingsController@generateInvoicePdf
+  GET|HEAD        api/print-settings/invoices/{id}/quick-print ......... API\PrintSettingsController@quickPrintInvoice
+  GET|HEAD        api/print-settings/receipts/{id}/preview ................ API\PrintSettingsController@previewReceipt
+  GET|HEAD        api/print-settings/receipts/{id}/print .............. API\PrintSettingsController@generateReceiptPdf
+  GET|HEAD        api/print-settings/receipts/{id}/quick-print ......... API\PrintSettingsController@quickPrintReceipt
+  GET|HEAD        api/queues ............................................ api.queues.index ΓÇ║ API\QueueController@index
+  POST            api/queues ............................................ api.queues.store ΓÇ║ API\QueueController@store
+  POST            api/queues/call-next .................................................. API\QueueController@callNext
+  POST            api/queues/reorder ..................................................... API\QueueController@reorder
+  GET|HEAD        api/queues/statistics ............................................... API\QueueController@statistics
+  GET|HEAD        api/queues/status/{queueType} ................................... API\QueueController@getQueueStatus
+  POST            api/queues/{id}/cancel .................................................. API\QueueController@cancel
+  POST            api/queues/{id}/complete-serving ............................... API\QueueController@completeServing
+  GET|HEAD        api/queues/{id}/lab-details ......................................... API\QueueController@labDetails
+  POST            api/queues/{id}/no-show ............................................. API\QueueController@markNoShow
+  GET|HEAD        api/queues/{id}/print-ticket ....................................... API\QueueController@printTicket
+  GET|HEAD        api/queues/{id}/reprint-ticket ................................... API\QueueController@reprintTicket
+  POST            api/queues/{id}/start-serving ..................................... API\QueueController@startServing
+  GET|HEAD        api/queues/{queue} ...................................... api.queues.show ΓÇ║ API\QueueController@show
+  PUT|PATCH       api/queues/{queue} .................................. api.queues.update ΓÇ║ API\QueueController@update
+  DELETE          api/queues/{queue} ................................ api.queues.destroy ΓÇ║ API\QueueController@destroy
+  GET|HEAD        api/radiology/contrast-agents ............................ API\RadiologyController@getContrastAgents
+  GET|HEAD        api/radiology/departments ................................... API\RadiologyController@getDepartments
+  GET|HEAD        api/radiology/equipment/available .................... API\RadiologyController@getAvailableEquipment
+  GET|HEAD        api/radiology/modalities ..................................... API\RadiologyController@getModalities
+  GET|HEAD        api/radiology/patients/{id}/history-pdf .......... API\RadiologyController@generatePatientHistoryPdf
+  GET|HEAD        api/radiology/protocols ....................................... API\RadiologyController@getProtocols
+  GET|HEAD        api/radiology/radiologists ................................. API\RadiologyController@getRadiologists
+  GET|HEAD        api/radiology/reports ........................................... API\RadiologyController@getReports
+  GET|HEAD        api/radiology/reports/{id} ...................................... API\RadiologyController@showReport
+  PUT             api/radiology/reports/{id} .................................... API\RadiologyController@updateReport
+  GET|HEAD        api/radiology/reports/{id}/pdf ........................... API\RadiologyController@generateReportPdf
+  GET|HEAD        api/radiology/requests ......................................... API\RadiologyController@getRequests
+  POST            api/radiology/requests ....................................... API\RadiologyController@createRequest
+  POST            api/radiology/requests/bulk-delete .............................. API\RadiologyController@bulkDelete
+  POST            api/radiology/requests/bulk-update-status ................. API\RadiologyController@bulkUpdateStatus
+  GET|HEAD        api/radiology/requests/{id} .................................... API\RadiologyController@showRequest
+  PUT             api/radiology/requests/{id} .................................. API\RadiologyController@updateRequest
+  DELETE          api/radiology/requests/{id} .................................. API\RadiologyController@deleteRequest
+  POST            api/radiology/requests/{id}/schedule ....................... API\RadiologyController@scheduleRequest
+  POST            api/radiology/requests/{id}/start-study ......................... API\RadiologyController@startStudy
+  GET|HEAD        api/radiology/studies ........................................... API\RadiologyController@getStudies
+  GET|HEAD        api/radiology/studies/{id} ....................................... API\RadiologyController@showStudy
+  POST            api/radiology/studies/{id}/complete .......................... API\RadiologyController@completeStudy
+  GET|HEAD        api/radiology/studies/{id}/pdf ..................... API\RadiologyController@generateStudySummaryPdf
+  POST            api/radiology/studies/{id}/report ............................. API\RadiologyController@createReport
+  POST            api/radiology/studies/{id}/upload-images ...................... API\RadiologyController@uploadImages
+  GET|HEAD        api/radiology/technicians ................................... API\RadiologyController@getTechnicians
+  GET|HEAD        api/realtime/active-modules ............................ API\RealTimeDataController@getActiveModules
+  POST            api/realtime/data-change-summary ................... API\RealTimeDataController@getDataChangeSummary
+  POST            api/realtime/invalidate-cache ........................... API\RealTimeDataController@invalidateCache
+  POST            api/realtime/module-data .................................. API\RealTimeDataController@getModuleData
+  POST            api/realtime/polling-interval ........................ API\RealTimeDataController@getPollingInterval
+  POST            api/realtime/update-activity ............................. API\RealTimeDataController@updateActivity
+  GET|HEAD        api/referrals/pending ............................................ API\ReferralController@getPending
+  GET|HEAD        api/reports/dashboard-statistics .................... API\ReportingController@getDashboardStatistics
+  GET|HEAD        api/reports/emergency .............................. API\ReportingController@generateEmergencyReport
+  GET|HEAD        api/reports/financial .............................. API\ReportingController@generateFinancialReport
+  GET|HEAD        api/reports/ghs .......................................... API\ReportingController@generateGHSReport
+  GET|HEAD        api/reports/lab .......................................... API\ReportingController@generateLabReport
+  GET|HEAD        api/reports/nhis ........................................ API\ReportingController@generateNHISReport
+  GET|HEAD        api/reports/patient/{patient} ........................ API\ReportingController@generatePatientReport
+  GET|HEAD        api/reports/surgery .................................. API\ReportingController@generateSurgeryReport
+  GET|HEAD        api/revenue/branch-comparison ................... API\RevenueAnalyticsController@getBranchComparison
+  GET|HEAD        api/revenue/by-department .................... API\RevenueAnalyticsController@getRevenueByDepartment
+  GET|HEAD        api/revenue/by-payment-method ............. API\RevenueAnalyticsController@getRevenueByPaymentMethod
+  GET|HEAD        api/revenue/daily-trend ............................... API\RevenueAnalyticsController@getDailyTrend
+  GET|HEAD        api/revenue/outstanding ...................... API\RevenueAnalyticsController@getOutstandingPayments
+  GET|HEAD        api/revenue/summary ...................................... API\RevenueAnalyticsController@getSummary
+  GET|HEAD        api/revenue/top-drugs ................................... API\RevenueAnalyticsController@getTopDrugs
+  GET|HEAD        api/revenue/top-services ............................. API\RevenueAnalyticsController@getTopServices
+  GET|HEAD        api/roles ............................................... api.roles.index ΓÇ║ API\RoleController@index
+  POST            api/roles ............................................... api.roles.store ΓÇ║ API\RoleController@store
+  GET|HEAD        api/roles/{role} .......................................... api.roles.show ΓÇ║ API\RoleController@show
+  PUT|PATCH       api/roles/{role} ...................................... api.roles.update ΓÇ║ API\RoleController@update
+  DELETE          api/roles/{role} .................................... api.roles.destroy ΓÇ║ API\RoleController@destroy
+  GET|HEAD        api/roles/{role}/permissions ............................................... API\RoleController@show
+  GET|HEAD        api/search .......................................... api.search ΓÇ║ API\GlobalSearchController@search
+  GET|HEAD        api/settings .......................................................... API\SettingsController@index
+  GET|HEAD        api/settings/all ...................................................... API\SettingsController@index
+  GET|HEAD        api/settings/api ............................................. API\SettingsController@getApiSettings
+  POST            api/settings/api .......................................... API\SettingsController@updateApiSettings
+  GET|HEAD        api/settings/api/frontend-config ....................... API\SettingsController@getFrontendApiConfig
+  GET|HEAD        api/settings/api/mobile-config ........................... API\SettingsController@getMobileApiConfig
+  GET|HEAD        api/settings/app-config ................................. API\SettingsController@getAppConfiguration
+  GET|HEAD        api/settings/audit ......................................... API\SettingsController@getSettingsAudit
+  GET|HEAD        api/settings/backup .......................................... API\SettingsController@backupSettings
+  GET|HEAD        api/settings/branding ................................... API\SettingsController@getBrandingSettings
+  POST            api/settings/branding ........................................ API\SettingsController@updateBranding
+  GET|HEAD        api/settings/documents .................................. API\SettingsController@getDocumentSettings
+  POST            api/settings/documents ............................... API\SettingsController@updateDocumentSettings
+  GET|HEAD        api/settings/ecommerce ................................. API\SettingsController@getEcommerceSettings
+  GET|HEAD        api/settings/email ......................................... API\SettingsController@getEmailSettings
+  POST            api/settings/email .............................................. API\SettingsController@updateEmail
+  GET|HEAD        api/settings/export .......................................... API\SettingsController@exportSettings
+  GET|HEAD        api/settings/general ..................................... API\SettingsController@getGeneralSettings
+  POST            api/settings/general .................................. API\SettingsController@updateGeneralSettings
+  GET|HEAD        api/settings/id-prefixes ................................ API\SettingsController@getIdPrefixSettings
+  POST            api/settings/id-prefixes ..................................... API\SettingsController@createIdPrefix
+  POST            api/settings/id-prefixes/lock ................................... API\SettingsController@lockSetting
+  POST            api/settings/id-prefixes/reset-sequence ....................... API\SettingsController@resetSequence
+  POST            api/settings/id-prefixes/test ................................ API\SettingsController@generateTestId
+  POST            api/settings/id-prefixes/unlock ............................... API\SettingsController@unlockSetting
+  POST            api/settings/id-prefixes/validate ........................... API\SettingsController@validatePattern
+  PUT             api/settings/id-prefixes/{entityType} ........................ API\SettingsController@updateIdPrefix
+  POST            api/settings/import .......................................... API\SettingsController@importSettings
+  GET|HEAD        api/settings/maintenance .................................. API\SettingsController@maintenanceStatus
+  GET|HEAD        api/settings/mobile-app .................................. API\SettingsController@getMobileAppConfig
+  POST            api/settings/mobile-app ..................................... API\SettingsController@updateMobileApp
+  GET|HEAD        api/settings/mobile-app-admin .......................... API\SettingsController@getMobileAppSettings
+  GET|HEAD        api/settings/mobile-config ............................... API\SettingsController@getMobileAppConfig
+  GET|HEAD        api/settings/payment ..................................... API\SettingsController@getPaymentSettings
+  POST            api/settings/payment .......................................... API\SettingsController@updatePayment
+  GET|HEAD        api/settings/public .................................................. API\SettingsController@public
+  POST            api/settings/restore ........................................ API\SettingsController@restoreSettings
+  GET|HEAD        api/settings/sms ............................................. API\SettingsController@getSmsSettings
+  POST            api/settings/sms .................................................. API\SettingsController@updateSms
+  POST            api/settings/sms/test ............................................... API\SettingsController@testSms
+  GET|HEAD        api/settings/sync ........................................... API\SettingsController@getSyncSettings
+  POST            api/settings/sync ........................................ API\SettingsController@updateSyncSettings
+  POST            api/settings/system ............................................ API\SettingsController@updateSystem
+  POST            api/settings/test-email ........................................... API\SettingsController@testEmail
+  POST            api/settings/test-payment ....................................... API\SettingsController@testPayment
+  POST            api/settings/validate ...................................... API\SettingsController@validateSettings
+  GET|HEAD        api/store-items .................................. store-items.index ΓÇ║ API\ECommerceController@index
+  POST            api/store-items .................................. store-items.store ΓÇ║ API\ECommerceController@store
+  GET|HEAD        api/store-items/categories ................................... API\ECommerceController@getCategories
+  GET|HEAD        api/store-items/search ......................................... API\ECommerceController@searchItems
+  GET|HEAD        api/store-items/{store_item} ....................... store-items.show ΓÇ║ API\ECommerceController@show
+  PUT|PATCH       api/store-items/{store_item} ................... store-items.update ΓÇ║ API\ECommerceController@update
+  DELETE          api/store-items/{store_item} ................. store-items.destroy ΓÇ║ API\ECommerceController@destroy
+  POST            api/store-orders ............................................... API\ECommerceController@createOrder
+  GET|HEAD        api/store-orders ................................................. API\ECommerceController@getOrders
+  GET|HEAD        api/store-orders/{order} ................................... API\ECommerceController@getOrderDetails
+  PUT             api/store-orders/{order}/delivery ..................... API\ECommerceController@updateDeliveryStatus
+  PUT             api/store-orders/{order}/status .......................... API\ECommerceController@updateOrderStatus
+  GET|HEAD        api/store-orders/{order}/tracking ...................... API\ECommerceController@getDeliveryTracking
+  GET|HEAD        api/surgery-schedules ........................ surgery-schedules.index ΓÇ║ API\SurgeryController@index
+  POST            api/surgery-schedules ........................ surgery-schedules.store ΓÇ║ API\SurgeryController@store
+  GET|HEAD        api/surgery-schedules/{surgery_schedule} ....... surgery-schedules.show ΓÇ║ API\SurgeryController@show
+  PUT|PATCH       api/surgery-schedules/{surgery_schedule} ... surgery-schedules.update ΓÇ║ API\SurgeryController@update
+  DELETE          api/surgery-schedules/{surgery_schedule} . surgery-schedules.destroy ΓÇ║ API\SurgeryController@destroy
+  POST            api/surgery-schedules/{surgery}/complete ..................... API\SurgeryController@completeSurgery
+  POST            api/surgery-schedules/{surgery}/start ........................... API\SurgeryController@startSurgery
+  GET|HEAD        api/surgery/statistics ......................................... API\SurgeryController@getStatistics
+  POST            api/sync/from-server ............................................. API\SyncController@syncFromServer
+  POST            api/sync/resolve-conflicts ..................................... API\SyncController@resolveConflicts
+  GET|HEAD        api/sync/status ................................................... API\SyncController@getSyncStatus
+  POST            api/sync/to-server ................................................. API\SyncController@syncToServer
+  PUT             api/teleconsultation-chat/{chat} ......................... API\TeleconsultationChatController@update
+  DELETE          api/teleconsultation-chat/{chat} ........................ API\TeleconsultationChatController@destroy
+  PUT             api/teleconsultation-files/{file} ........................ API\TeleconsultationFileController@update
+  DELETE          api/teleconsultation-files/{file} ....................... API\TeleconsultationFileController@destroy
+  POST            api/teleconsultation-files/{file}/consent ........... API\TeleconsultationFileController@giveConsent
+  DELETE          api/teleconsultation-files/{file}/consent ......... API\TeleconsultationFileController@revokeConsent
+  GET|HEAD        api/teleconsultation-files/{file}/download ............. API\TeleconsultationFileController@download
+  GET|HEAD        api/teleconsultations ........... api.teleconsultations.index ΓÇ║ API\TeleconsultationController@index
+  POST            api/teleconsultations ........... api.teleconsultations.store ΓÇ║ API\TeleconsultationController@store
+  GET|HEAD        api/teleconsultations/statistics ......................... API\TeleconsultationController@statistics
+  GET|HEAD        api/teleconsultations/{teleconsultation} api.teleconsultations.show ΓÇ║ API\TeleconsultationControlleΓÇª
+  PUT|PATCH       api/teleconsultations/{teleconsultation} api.teleconsultations.update ΓÇ║ API\TeleconsultationControlΓÇª
+  DELETE          api/teleconsultations/{teleconsultation} api.teleconsultations.destroy ΓÇ║ API\TeleconsultationControΓÇª
+  POST            api/teleconsultations/{teleconsultation}/cancel .............. API\TeleconsultationController@cancel
+  GET|HEAD        api/teleconsultations/{teleconsultation}/chat ............. API\TeleconsultationChatController@index
+  POST            api/teleconsultations/{teleconsultation}/chat ............. API\TeleconsultationChatController@store
+  POST            api/teleconsultations/{teleconsultation}/chat/mark-read API\TeleconsultationChatController@markAsReΓÇª
+  GET|HEAD        api/teleconsultations/{teleconsultation}/chat/unread-count API\TeleconsultationChatController@unreaΓÇª
+  GET|HEAD        api/teleconsultations/{teleconsultation}/consent ......... API\TeleconsultationController@getConsent
+  POST            api/teleconsultations/{teleconsultation}/consent ........ API\TeleconsultationController@giveConsent
+  POST            api/teleconsultations/{teleconsultation}/end .................... API\TeleconsultationController@end
+  GET|HEAD        api/teleconsultations/{teleconsultation}/files ............ API\TeleconsultationFileController@index
+  POST            api/teleconsultations/{teleconsultation}/files ............ API\TeleconsultationFileController@store
+  GET|HEAD        api/teleconsultations/{teleconsultation}/files/statistics API\TeleconsultationFileController@statisΓÇª
+  GET|HEAD        api/teleconsultations/{teleconsultation}/jitsi-config API\TeleconsultationController@getJitsiConfig
+  POST            api/teleconsultations/{teleconsultation}/patient-token API\TeleconsultationController@generatePatieΓÇª
+  POST            api/teleconsultations/{teleconsultation}/start ................ API\TeleconsultationController@start
+  GET|HEAD        api/test ........................................................................................... 
+  GET|HEAD        api/test-patient/{patient} ................... API\PatientProfileController@testComprehensiveProfile
+  GET|HEAD        api/theatres/{theatre}/availability ................... API\SurgeryController@getTheatreAvailability
+  GET|HEAD        api/user ........................................................................................... 
+  GET|HEAD        api/users ............................................... api.users.index ΓÇ║ API\UserController@index
+  POST            api/users ............................................... api.users.store ΓÇ║ API\UserController@store
+  GET|HEAD        api/users/doctors ....................................................... API\UserController@doctors
+  GET|HEAD        api/users/nurses ......................................................... API\UserController@nurses
+  GET|HEAD        api/users/role/{role} ............................................ API\UserController@getUsersByRole
+  GET|HEAD        api/users/search .................................................... API\UserController@searchUsers
+  GET|HEAD        api/users/statistics .............................................. API\UserController@getStatistics
+  GET|HEAD        api/users/{user} .......................................... api.users.show ΓÇ║ API\UserController@show
+  PUT|PATCH       api/users/{user} ...................................... api.users.update ΓÇ║ API\UserController@update
+  DELETE          api/users/{user} .................................... api.users.destroy ΓÇ║ API\UserController@destroy
+  POST            api/users/{user}/toggle-status ..................................... API\UserController@toggleStatus
+  GET|HEAD        api/visits ............................................ api.visits.index ΓÇ║ API\VisitController@index
+  POST            api/visits ............................................ api.visits.store ΓÇ║ API\VisitController@store
+  GET|HEAD        api/visits/statistics ............................................... API\VisitController@statistics
+  POST            api/visits/{id}/cancel .................................................. API\VisitController@cancel
+  POST            api/visits/{id}/complete .............................................. API\VisitController@complete
+  POST            api/visits/{visitId}/admit .............................. API\BedAssignmentController@admitFromVisit
+  POST            api/visits/{visitId}/complete-emergency ............. API\EmergencyController@completeEmergencyVisit
+  POST            api/visits/{visitId}/complete-pharmacy .............. API\PharmacyController@completePharmacyService
+  POST            api/visits/{visitId}/consultation .................... API\ConsultationController@createFromOPDVisit
+  POST            api/visits/{visitId}/emergency ............................. API\EmergencyController@createFromVisit
+  POST            api/visits/{visitId}/prescription ........................... API\PharmacyController@createFromVisit
+  GET|HEAD        api/visits/{visit} ...................................... api.visits.show ΓÇ║ API\VisitController@show
+  PUT|PATCH       api/visits/{visit} .................................. api.visits.update ΓÇ║ API\VisitController@update
+  DELETE          api/visits/{visit} ................................ api.visits.destroy ΓÇ║ API\VisitController@destroy
+  GET|HEAD        api/vitals ........................................... api.vitals.index ΓÇ║ API\VitalsController@index
+  POST            api/vitals ........................................... api.vitals.store ΓÇ║ API\VitalsController@store
+  GET|HEAD        api/vitals/me ..................................................... API\VitalsController@getMyVitals
+  GET|HEAD        api/vitals/statistics ........................................... API\VitalsController@getStatistics
+  GET|HEAD        api/vitals/{vital} ..................................... api.vitals.show ΓÇ║ API\VitalsController@show
+  PUT|PATCH       api/vitals/{vital} ................................. api.vitals.update ΓÇ║ API\VitalsController@update
+  DELETE          api/vitals/{vital} ............................... api.vitals.destroy ΓÇ║ API\VitalsController@destroy
+  GET|HEAD        api/walk-ins ...................................... api.walk-ins.index ΓÇ║ API\WalkInsController@index
+  POST            api/walk-ins ...................................... api.walk-ins.store ΓÇ║ API\WalkInsController@store
+  GET|HEAD        api/walk-ins/statistics ........................................... API\WalkInsController@statistics
+  GET|HEAD        api/walk-ins/{walk_in} .............................. api.walk-ins.show ΓÇ║ API\WalkInsController@show
+  PUT|PATCH       api/walk-ins/{walk_in} .......................... api.walk-ins.update ΓÇ║ API\WalkInsController@update
+  DELETE          api/walk-ins/{walk_in} ........................ api.walk-ins.destroy ΓÇ║ API\WalkInsController@destroy
+  GET|HEAD        api/wards ............................................... api.wards.index ΓÇ║ API\WardController@index
+  POST            api/wards ............................................... api.wards.store ΓÇ║ API\WardController@store
+  GET|HEAD        api/wards/occupancy ............................................... API\WardController@getStatistics
+  GET|HEAD        api/wards/statistics .............................................. API\WardController@getStatistics
+  GET|HEAD        api/wards/{ward} .......................................... api.wards.show ΓÇ║ API\WardController@show
+  PUT|PATCH       api/wards/{ward} ...................................... api.wards.update ΓÇ║ API\WardController@update
+  DELETE          api/wards/{ward} .................................... api.wards.destroy ΓÇ║ API\WardController@destroy
+  POST            api/workflow/instance/{workflowInstance}/complete-step workflow.complete-step ΓÇ║ Web\WorkflowControlΓÇª
+  GET|HEAD        api/workflow/instance/{workflowInstance}/next-step workflow.next-step ΓÇ║ Web\WorkflowController@getNΓÇª
+  GET|HEAD        api/workflow/instance/{workflowInstance}/progress workflow.progress ΓÇ║ Web\WorkflowController@getProΓÇª
+  GET|HEAD        api/workflow/instance/{workflowInstance}/status . workflow.status ΓÇ║ Web\WorkflowController@getStatus
+  POST            api/workflow/log-action ..................... workflow.log-action ΓÇ║ Web\WorkflowController@logAction
+  GET|HEAD        appointment-fees ....................... appointment-fees.index ΓÇ║ Web\AppointmentFeeController@index
+  POST            appointment-fees ....................... appointment-fees.store ΓÇ║ Web\AppointmentFeeController@store
+  POST            appointment-fees/bulk-create appointment-fees.bulk-create ΓÇ║ Web\AppointmentFeeController@bulkCreate
+  GET|HEAD        appointment-fees/create .............. appointment-fees.create ΓÇ║ Web\AppointmentFeeController@create
+  PATCH           appointment-fees/{appointmentFee}/toggle-status appointment-fees.toggle-status ΓÇ║ Web\AppointmentFeeΓÇª
+  GET|HEAD        appointment-fees/{appointment_fee} ....... appointment-fees.show ΓÇ║ Web\AppointmentFeeController@show
+  PUT|PATCH       appointment-fees/{appointment_fee} ... appointment-fees.update ΓÇ║ Web\AppointmentFeeController@update
+  DELETE          appointment-fees/{appointment_fee} . appointment-fees.destroy ΓÇ║ Web\AppointmentFeeController@destroy
+  GET|HEAD        appointment-fees/{appointment_fee}/edit .. appointment-fees.edit ΓÇ║ Web\AppointmentFeeController@edit
+  GET|HEAD        appointments .................................. appointments.index ΓÇ║ Web\AppointmentController@index
+  POST            appointments .................................. appointments.store ΓÇ║ Web\AppointmentController@store
+  GET|HEAD        appointments/create ......................... appointments.create ΓÇ║ Web\AppointmentController@create
+  GET|HEAD        appointments/payment/process appointments.process-payment ΓÇ║ Web\AppointmentController@processPayment
+  GET|HEAD        appointments/slots .................. appointments.slots.index ΓÇ║ Web\AppointmentSlotController@index
+  POST            appointments/slots .................. appointments.slots.store ΓÇ║ Web\AppointmentSlotController@store
+  POST            appointments/slots/bulk-delete appointments.slots.bulk-delete ΓÇ║ Web\AppointmentSlotController@bulkDΓÇª
+  GET|HEAD        appointments/slots/create ......... appointments.slots.create ΓÇ║ Web\AppointmentSlotController@create
+  PUT             appointments/slots/{id} ........... appointments.slots.update ΓÇ║ Web\AppointmentSlotController@update
+  DELETE          appointments/slots/{id} ......... appointments.slots.destroy ΓÇ║ Web\AppointmentSlotController@destroy
+  POST            appointments/slots/{id}/block ....... appointments.slots.block ΓÇ║ Web\AppointmentSlotController@block
+  GET|HEAD        appointments/slots/{id}/edit .......... appointments.slots.edit ΓÇ║ Web\AppointmentSlotController@edit
+  POST            appointments/slots/{id}/unblock . appointments.slots.unblock ΓÇ║ Web\AppointmentSlotController@unblock
+  GET|HEAD        appointments/{appointment} ...................... appointments.show ΓÇ║ Web\AppointmentController@show
+  PUT|PATCH       appointments/{appointment} .................. appointments.update ΓÇ║ Web\AppointmentController@update
+  DELETE          appointments/{appointment} ................ appointments.destroy ΓÇ║ Web\AppointmentController@destroy
+  GET|HEAD        appointments/{appointment}/calculate-fee appointments.calculate-fee ΓÇ║ Web\AppointmentController@calΓÇª
+  GET|HEAD        appointments/{appointment}/edit ................. appointments.edit ΓÇ║ Web\AppointmentController@edit
+  POST            appointments/{appointment}/initialize-payment appointments.initialize-payment ΓÇ║ Web\AppointmentContΓÇª
+  GET|HEAD        billing ................................................ billing.index ΓÇ║ Web\BillingController@index
+  POST            billing ................................................ billing.store ΓÇ║ Web\BillingController@store
+  GET|HEAD        billing/create ....................................... billing.create ΓÇ║ Web\BillingController@create
+  GET|HEAD        billing/services .............................. billing.services ΓÇ║ Web\BillingController@getServices
+  GET|HEAD        billing/services/public ................ billing.services.public ΓÇ║ Web\BillingController@getServices
+  GET|HEAD        billing/{billing} ........................................ billing.show ΓÇ║ Web\BillingController@show
+  PUT|PATCH       billing/{billing} .................................... billing.update ΓÇ║ Web\BillingController@update
+  DELETE          billing/{billing} .................................. billing.destroy ΓÇ║ Web\BillingController@destroy
+  GET|HEAD        billing/{billing}/download ....................... billing.download ΓÇ║ Web\BillingController@download
+  GET|HEAD        billing/{billing}/edit ................................... billing.edit ΓÇ║ Web\BillingController@edit
+  GET|HEAD        billing/{billing}/print ................................ billing.print ΓÇ║ Web\BillingController@print
+  GET|HEAD        branches ............................................... branches.index ΓÇ║ Web\BranchController@index
+  POST            branches ............................................... branches.store ΓÇ║ Web\BranchController@store
+  GET|HEAD        branches/create ...................................... branches.create ΓÇ║ Web\BranchController@create
+  GET|HEAD        branches/{branch} ........................................ branches.show ΓÇ║ Web\BranchController@show
+  PUT|PATCH       branches/{branch} .................................... branches.update ΓÇ║ Web\BranchController@update
+  DELETE          branches/{branch} .................................. branches.destroy ΓÇ║ Web\BranchController@destroy
+  GET|HEAD        branches/{branch}/edit ................................... branches.edit ΓÇ║ Web\BranchController@edit
+  GET|HEAD        cashier ................................................ cashier.index ΓÇ║ Web\CashierController@index
+  GET|HEAD        cashier/daily-report .............. cashier.daily-report ΓÇ║ Web\CashierController@generateDailyReport
+  GET|HEAD        cashier/debug-auth .............................................................. cashier.debug-auth
+  GET|HEAD        cashier/outstanding-debts .... cashier.outstanding-debts ΓÇ║ Web\CashierController@getOutstandingDebts
+  GET|HEAD        cashier/patient/{patient}/charges cashier.get-patient-charges ΓÇ║ Web\CashierController@getPatientChaΓÇª
+  GET|HEAD        cashier/patient/{patient}/debt-info cashier.get-patient-debt-info ΓÇ║ Web\CashierController@getPatienΓÇª
+  GET|HEAD        cashier/patient/{patient}/payment-history cashier.payment-history ΓÇ║ Web\CashierController@getPaymenΓÇª
+  GET|HEAD        cashier/payment/{payment}/receipt . cashier.generate-receipt ΓÇ║ Web\CashierController@generateReceipt
+  GET|HEAD        cashier/pending-payments .... cashier.pending-payments ΓÇ║ Web\CashierController@getAllPendingPayments
+  POST            cashier/process-payment ............. cashier.process-payment ΓÇ║ Web\CashierController@processPayment
+  POST            cashier/search-patient ................ cashier.search-patient ΓÇ║ Web\CashierController@searchPatient
+  GET|HEAD        cashier/{module}/patient/{patient}/payments cashier.module-payment-history ΓÇ║ Web\CashierController@ΓÇª
+  GET|HEAD        cashier/{module}/{id}/receipt . cashier.module-receipt ΓÇ║ Web\CashierController@generateModuleReceipt
+  GET|HEAD        complaints ........................................ complaints.index ΓÇ║ Web\ComplaintController@index
+  POST            complaints ........................................ complaints.store ΓÇ║ Web\ComplaintController@store
+  GET|HEAD        complaints/create ............................... complaints.create ΓÇ║ Web\ComplaintController@create
+  GET|HEAD        complaints/{complaint} .............................. complaints.show ΓÇ║ Web\ComplaintController@show
+  PUT|PATCH       complaints/{complaint} .......................... complaints.update ΓÇ║ Web\ComplaintController@update
+  DELETE          complaints/{complaint} ........................ complaints.destroy ΓÇ║ Web\ComplaintController@destroy
+  GET|HEAD        complaints/{complaint}/edit ......................... complaints.edit ΓÇ║ Web\ComplaintController@edit
+  GET|HEAD        consultations ............................... consultations.index ΓÇ║ Web\ConsultationController@index
+  POST            consultations ............................... consultations.store ΓÇ║ Web\ConsultationController@store
+  POST            consultations/bulk-delete ........ consultations.bulk-delete ΓÇ║ Web\ConsultationController@bulkDelete
+  POST            consultations/call-next .. consultations.call-next ΓÇ║ Web\ConsultationController@callNextConsultation
+  GET|HEAD        consultations/completed consultations.completed ΓÇ║ Web\ConsultationController@completedConsultations
+  GET|HEAD        consultations/create ...................... consultations.create ΓÇ║ Web\ConsultationController@create
+  GET|HEAD        consultations/create-for-patient/{patient} consultations.create-for-patient ΓÇ║ Web\ConsultationContrΓÇª
+  GET|HEAD        consultations/create-from-queue/{consultation} consultations.create-from-queue ΓÇ║ Web\ConsultationCoΓÇª
+  GET|HEAD        consultations/create-request consultations.create-request ΓÇ║ Web\ConsultationController@createRequest
+  GET|HEAD        consultations/doctor-queue ..... consultations.doctor-queue ΓÇ║ Web\ConsultationController@doctorQueue
+  POST            consultations/store-request .. consultations.store-request ΓÇ║ Web\ConsultationController@storeRequest
+  GET|HEAD        consultations/{consultation} .................. consultations.show ΓÇ║ Web\ConsultationController@show
+  PUT|PATCH       consultations/{consultation} .............. consultations.update ΓÇ║ Web\ConsultationController@update
+  DELETE          consultations/{consultation} ............ consultations.destroy ΓÇ║ Web\ConsultationController@destroy
+  GET|HEAD        consultations/{consultation}/edit ............. consultations.edit ΓÇ║ Web\ConsultationController@edit
+  POST            consultations/{consultation}/no-show . consultations.no-show ΓÇ║ Web\ConsultationController@markNoShow
+  GET|HEAD        consultations/{consultation}/radiology/create consultations.radiology.create ΓÇ║ Web\ConsultationContΓÇª
+  GET|HEAD        dashboard ................................................ dashboard ΓÇ║ Web\DashboardController@index
+  GET|HEAD        dashboard/realtime-data ............... dashboard.realtime ΓÇ║ Web\DashboardController@getRealtimeData
+  GET|HEAD        debtors ................................................. debtors.index ΓÇ║ Web\DebtorController@index
+  POST            debtors ................................................. debtors.store ΓÇ║ Web\DebtorController@store
+  POST            debtors/bulk-update .......................... debtors.bulk-update ΓÇ║ Web\DebtorController@bulkUpdate
+  GET|HEAD        debtors/create ........................................ debtors.create ΓÇ║ Web\DebtorController@create
+  GET|HEAD        debtors/report ........................................ debtors.report ΓÇ║ Web\DebtorController@report
+  POST            debtors/send-reminders ................. debtors.send-reminders ΓÇ║ Web\DebtorController@sendReminders
+  GET|HEAD        debtors/statistics ......................... debtors.statistics ΓÇ║ Web\DebtorController@getStatistics
+  GET|HEAD        debtors/{debtor} .......................................... debtors.show ΓÇ║ Web\DebtorController@show
+  PUT|PATCH       debtors/{debtor} ...................................... debtors.update ΓÇ║ Web\DebtorController@update
+  DELETE          debtors/{debtor} .................................... debtors.destroy ΓÇ║ Web\DebtorController@destroy
+  GET|HEAD        debtors/{debtor}/edit ..................................... debtors.edit ΓÇ║ Web\DebtorController@edit
+  GET|HEAD        debtors/{debtor}/outstanding-invoices debtors.outstanding-invoices ΓÇ║ Web\DebtorController@outstandiΓÇª
+  GET|HEAD        debtors/{debtor}/payment-history ..... debtors.payment-history ΓÇ║ Web\DebtorController@paymentHistory
+  POST            debtors/{debtor}/update-status ........... debtors.update-status ΓÇ║ Web\DebtorController@updateStatus
+  GET|HEAD        debug-apk .......................................................................................... 
+  GET|HEAD        debug/dynamic-urls .............................................................. debug.dynamic-urls
+  GET|HEAD        debug/realtime ...................................................................... debug.realtime
+  GET|HEAD        debug/realtime-simple ........................................................ debug.realtime-simple
+  GET|HEAD        debug/test .............................................................................. debug.test
+  GET|HEAD        debug/voice-system .............................................................. debug.voice-system
+  GET|HEAD        doctor-schedules ....................... doctor-schedules.index ΓÇ║ Web\DoctorScheduleController@index
+  POST            doctor-schedules ....................... doctor-schedules.store ΓÇ║ Web\DoctorScheduleController@store
+  GET|HEAD        doctor-schedules/create .............. doctor-schedules.create ΓÇ║ Web\DoctorScheduleController@create
+  GET|HEAD        doctor-schedules/{doctor_schedule} ....... doctor-schedules.show ΓÇ║ Web\DoctorScheduleController@show
+  PUT|PATCH       doctor-schedules/{doctor_schedule} ... doctor-schedules.update ΓÇ║ Web\DoctorScheduleController@update
+  DELETE          doctor-schedules/{doctor_schedule} . doctor-schedules.destroy ΓÇ║ Web\DoctorScheduleController@destroy
+  GET|HEAD        doctor-schedules/{doctor_schedule}/edit .. doctor-schedules.edit ΓÇ║ Web\DoctorScheduleController@edit
+  GET|HEAD        download ................................................... download ΓÇ║ Web\DownloadController@index
+  GET|HEAD        ecommerce .......................................... ecommerce.index ΓÇ║ Web\ECommerceController@index
+  POST            ecommerce .......................................... ecommerce.store ΓÇ║ Web\ECommerceController@store
+  GET|HEAD        ecommerce/create ................................. ecommerce.create ΓÇ║ Web\ECommerceController@create
+  GET|HEAD        ecommerce/dashboard ........................ ecommerce.dashboard ΓÇ║ Web\ECommerceController@dashboard
+  GET|HEAD        ecommerce/deliveries ..................... ecommerce.deliveries ΓÇ║ Web\ECommerceController@deliveries
+  POST            ecommerce/deliveries/{delivery}/assign ecommerce.deliveries.assign ΓÇ║ Web\ECommerceController@assignΓÇª
+  POST            ecommerce/deliveries/{delivery}/status ecommerce.deliveries.status ΓÇ║ Web\ECommerceController@updateΓÇª
+  GET|HEAD        ecommerce/orders ................................. ecommerce.orders ΓÇ║ Web\ECommerceController@orders
+  GET|HEAD        ecommerce/orders/{order} ................. ecommerce.orders.show ΓÇ║ Web\ECommerceController@showOrder
+  POST            ecommerce/orders/{order}/status ecommerce.orders.status ΓÇ║ Web\ECommerceController@updateOrderStatus
+  GET|HEAD        ecommerce/riders ................................. ecommerce.riders ΓÇ║ Web\ECommerceController@riders
+  POST            ecommerce/riders ....................... ecommerce.riders.store ΓÇ║ Web\ECommerceController@storeRider
+  GET|HEAD        ecommerce/riders/create .............. ecommerce.riders.create ΓÇ║ Web\ECommerceController@createRider
+  GET|HEAD        ecommerce/riders/{rider} ................. ecommerce.riders.show ΓÇ║ Web\ECommerceController@showRider
+  PUT             ecommerce/riders/{rider} ............. ecommerce.riders.update ΓÇ║ Web\ECommerceController@updateRider
+  DELETE          ecommerce/riders/{rider} ........... ecommerce.riders.destroy ΓÇ║ Web\ECommerceController@destroyRider
+  GET|HEAD        ecommerce/riders/{rider}/edit ............ ecommerce.riders.edit ΓÇ║ Web\ECommerceController@editRider
+  GET|HEAD        ecommerce/{ecommerce} ................................ ecommerce.show ΓÇ║ Web\ECommerceController@show
+  PUT|PATCH       ecommerce/{ecommerce} ............................ ecommerce.update ΓÇ║ Web\ECommerceController@update
+  DELETE          ecommerce/{ecommerce} .......................... ecommerce.destroy ΓÇ║ Web\ECommerceController@destroy
+  GET|HEAD        ecommerce/{ecommerce}/edit ........................... ecommerce.edit ΓÇ║ Web\ECommerceController@edit
+  GET|HEAD        emergency .......................................... emergency.index ΓÇ║ Web\EmergencyController@index
+  POST            emergency .......................................... emergency.store ΓÇ║ Web\EmergencyController@store
+  GET|HEAD        emergency-alerts ....................... emergency-alerts.index ΓÇ║ Web\EmergencyAlertController@index
+  POST            emergency-alerts ....................... emergency-alerts.store ΓÇ║ Web\EmergencyAlertController@store
+  GET|HEAD        emergency-alerts/create .............. emergency-alerts.create ΓÇ║ Web\EmergencyAlertController@create
+  POST            emergency-alerts/{emergencyAlert}/acknowledge emergency-alerts.acknowledge ΓÇ║ Web\EmergencyAlertContΓÇª
+  POST            emergency-alerts/{emergencyAlert}/resolve emergency-alerts.resolve ΓÇ║ Web\EmergencyAlertController@rΓÇª
+  GET|HEAD        emergency-alerts/{emergency_alert} ....... emergency-alerts.show ΓÇ║ Web\EmergencyAlertController@show
+  PUT|PATCH       emergency-alerts/{emergency_alert} ... emergency-alerts.update ΓÇ║ Web\EmergencyAlertController@update
+  DELETE          emergency-alerts/{emergency_alert} . emergency-alerts.destroy ΓÇ║ Web\EmergencyAlertController@destroy
+  GET|HEAD        emergency-alerts/{emergency_alert}/edit .. emergency-alerts.edit ΓÇ║ Web\EmergencyAlertController@edit
+  GET|HEAD        emergency/create ................................. emergency.create ΓÇ║ Web\EmergencyController@create
+  GET|HEAD        emergency/{emergency} ................................ emergency.show ΓÇ║ Web\EmergencyController@show
+  PUT|PATCH       emergency/{emergency} ............................ emergency.update ΓÇ║ Web\EmergencyController@update
+  DELETE          emergency/{emergency} .......................... emergency.destroy ΓÇ║ Web\EmergencyController@destroy
+  GET|HEAD        emergency/{emergency}/edit ........................... emergency.edit ΓÇ║ Web\EmergencyController@edit
+  GET|HEAD        forgot-password ........................... password.request ΓÇ║ Web\AuthController@showForgotPassword
+  POST            forgot-password ............................. password.email ΓÇ║ Web\AuthController@sendResetLinkEmail
+  GET|HEAD        id-prefixes ....................................... id-prefixes.index ΓÇ║ Web\IdPrefixController@index
+  POST            id-prefixes ....................................... id-prefixes.store ΓÇ║ Web\IdPrefixController@store
+  GET|HEAD        id-prefixes/create .............................. id-prefixes.create ΓÇ║ Web\IdPrefixController@create
+  PUT             id-prefixes/{entityType} ........................ id-prefixes.update ΓÇ║ Web\IdPrefixController@update
+  GET|HEAD        id-prefixes/{entityType}/edit ....................... id-prefixes.edit ΓÇ║ Web\IdPrefixController@edit
+  POST            id-prefixes/{entityType}/lock ....................... id-prefixes.lock ΓÇ║ Web\IdPrefixController@lock
+  POST            id-prefixes/{entityType}/reset-sequence id-prefixes.reset-sequence ΓÇ║ Web\IdPrefixController@resetSeΓÇª
+  GET|HEAD        id-prefixes/{entityType}/test ....................... id-prefixes.test ΓÇ║ Web\IdPrefixController@test
+  POST            id-prefixes/{entityType}/toggle-active id-prefixes.toggle-active ΓÇ║ Web\IdPrefixController@toggleActΓÇª
+  GET|HEAD        insurance .......................................... insurance.index ΓÇ║ Web\InsuranceController@index
+  GET|HEAD        insurance/analytics ........................ insurance.analytics ΓÇ║ Web\InsuranceController@analytics
+  POST            insurance/check-coverage .......... insurance.check-coverage ΓÇ║ Web\InsuranceController@checkCoverage
+  GET|HEAD        insurance/claims ................................. insurance.claims ΓÇ║ Web\InsuranceController@claims
+  POST            insurance/claims ....................... insurance.claims.store ΓÇ║ Web\InsuranceController@storeClaim
+  GET|HEAD        insurance/export-report ............. insurance.export-report ΓÇ║ Web\InsuranceController@exportReport
+  GET|HEAD        insurance/patients/{patient}/policies insurance.patient-policies ΓÇ║ Web\InsuranceController@getPatieΓÇª
+  GET|HEAD        insurance/policies ........................... insurance.policies ΓÇ║ Web\InsuranceController@policies
+  POST            insurance/policies .................. insurance.policies.store ΓÇ║ Web\InsuranceController@storePolicy
+  GET|HEAD        insurance/pre-authorizations insurance.pre-authorizations ΓÇ║ Web\InsuranceController@preAuthorizatioΓÇª
+  POST            insurance/pre-authorizations insurance.pre-authorizations.store ΓÇ║ Web\InsuranceController@storePreAΓÇª
+  PUT             insurance/pre-authorizations/{preAuthorization} insurance.pre-authorizations.update ΓÇ║ Web\InsuranceΓÇª
+  GET|HEAD        insurance/providers ........................ insurance.providers ΓÇ║ Web\InsuranceController@providers
+  POST            insurance/providers .............. insurance.providers.store ΓÇ║ Web\InsuranceController@storeProvider
+  GET|HEAD        invoices/{id}/preview ................ invoices.preview ΓÇ║ Web\PrintSettingsController@previewInvoice
+  GET|HEAD        invoices/{id}/print ................ invoices.print ΓÇ║ Web\PrintSettingsController@generateInvoicePdf
+  POST            lab ............................................................ lab.store ΓÇ║ Web\LabController@store
+  GET|HEAD        lab ............................................................ lab.index ΓÇ║ Web\LabController@index
+  GET|HEAD        lab/archive ..................................... lab.archive.index ΓÇ║ Web\LabArchiveController@index
+  GET|HEAD        lab/archive/compare-results .. lab.archive.compare-results ΓÇ║ Web\LabArchiveController@compareResults
+  GET|HEAD        lab/archive/patient/{patient}/export lab.archive.export-patient-history ΓÇ║ Web\LabArchiveController@ΓÇª
+  GET|HEAD        lab/archive/patient/{patient}/history lab.archive.patient-history ΓÇ║ Web\LabArchiveController@patienΓÇª
+  GET|HEAD        lab/archive/patient/{patient}/parameter/{parameter}/trend lab.archive.parameter-trend ΓÇ║ Web\LabArchΓÇª
+  POST            lab/bulk-delete ..................................... lab.bulk-delete ΓÇ║ Web\LabController@bulkDelete
+  GET|HEAD        lab/create ................................................... lab.create ΓÇ║ Web\LabController@create
+  GET|HEAD        lab/equipment .................................. lab.equipment.index ΓÇ║ Web\EquipmentController@index
+  POST            lab/equipment .................................. lab.equipment.store ΓÇ║ Web\EquipmentController@store
+  GET|HEAD        lab/equipment/create ......................... lab.equipment.create ΓÇ║ Web\EquipmentController@create
+  GET|HEAD        lab/equipment/{equipment} ........................ lab.equipment.show ΓÇ║ Web\EquipmentController@show
+  PUT             lab/equipment/{equipment} .................... lab.equipment.update ΓÇ║ Web\EquipmentController@update
+  DELETE          lab/equipment/{equipment} .................. lab.equipment.destroy ΓÇ║ Web\EquipmentController@destroy
+  GET|HEAD        lab/equipment/{equipment}/edit ................... lab.equipment.edit ΓÇ║ Web\EquipmentController@edit
+  GET|HEAD        lab/management/categories .................. lab.categories ΓÇ║ Web\LabManagementController@categories
+  POST            lab/management/categories ......... lab.categories.store ΓÇ║ Web\LabManagementController@storeCategory
+  GET|HEAD        lab/management/categories/create lab.categories.create ΓÇ║ Web\LabManagementController@createCategory
+  PUT             lab/management/categories/{category} lab.categories.update ΓÇ║ Web\LabManagementController@updateCateΓÇª
+  DELETE          lab/management/categories/{category} lab.categories.destroy ΓÇ║ Web\LabManagementController@destroyCaΓÇª
+  GET|HEAD        lab/management/categories/{category}/edit lab.categories.edit ΓÇ║ Web\LabManagementController@editCatΓÇª
+  POST            lab/management/parameters/bulk-action lab.parameters.bulk-action ΓÇ║ Web\LabManagementController@bulkΓÇª
+  POST            lab/management/parameters/{parameterId}/ranges lab.reference-ranges.store ΓÇ║ Web\LabManagementControΓÇª
+  GET|HEAD        lab/management/parameters/{parameterId}/ranges/create lab.reference-ranges.create ΓÇ║ Web\LabManagemeΓÇª
+  PUT             lab/management/parameters/{parameter} lab.parameters.update ΓÇ║ Web\LabManagementController@updateParΓÇª
+  DELETE          lab/management/parameters/{parameter} lab.parameters.destroy ΓÇ║ Web\LabManagementController@destroyPΓÇª
+  GET|HEAD        lab/management/parameters/{parameter}/edit lab.parameters.edit ΓÇ║ Web\LabManagementController@editPaΓÇª
+  POST            lab/management/parameters/{parameter}/toggle-status lab.parameters.toggle-status ΓÇ║ Web\LabManagemenΓÇª
+  POST            lab/management/parameters/{parameter}/update-unit lab.parameters.update-unit ΓÇ║ Web\LabManagementConΓÇª
+  PUT             lab/management/ranges/{referenceRange} lab.reference-ranges.update ΓÇ║ Web\LabManagementController@upΓÇª
+  DELETE          lab/management/ranges/{referenceRange} lab.reference-ranges.destroy ΓÇ║ Web\LabManagementController@dΓÇª
+  GET|HEAD        lab/management/ranges/{referenceRange}/edit lab.reference-ranges.edit ΓÇ║ Web\LabManagementControllerΓÇª
+  POST            lab/management/ranges/{referenceRange}/toggle-status lab.reference-ranges.toggle-status ΓÇ║ Web\LabMaΓÇª
+  GET|HEAD        lab/management/templates ..................... lab.templates ΓÇ║ Web\LabManagementController@templates
+  POST            lab/management/templates ........... lab.templates.store ΓÇ║ Web\LabManagementController@storeTemplate
+  GET|HEAD        lab/management/templates/create .. lab.templates.create ΓÇ║ Web\LabManagementController@createTemplate
+  POST            lab/management/templates/{templateId}/parameters lab.parameters.store ΓÇ║ Web\LabManagementControllerΓÇª
+  GET|HEAD        lab/management/templates/{templateId}/parameters/create lab.parameters.create ΓÇ║ Web\LabManagementCoΓÇª
+  GET|HEAD        lab/management/templates/{template} .. lab.templates.show ΓÇ║ Web\LabManagementController@showTemplate
+  PUT             lab/management/templates/{template} lab.templates.update ΓÇ║ Web\LabManagementController@updateTemplaΓÇª
+  DELETE          lab/management/templates/{template} lab.templates.destroy ΓÇ║ Web\LabManagementController@destroyTempΓÇª
+  GET|HEAD        lab/management/templates/{template}/edit lab.templates.edit ΓÇ║ Web\LabManagementController@editTemplΓÇª
+  GET|HEAD        lab/management/test-types ................... lab.test-types ΓÇ║ Web\LabManagementController@testTypes
+  POST            lab/management/test-types ......... lab.test-types.store ΓÇ║ Web\LabManagementController@storeTestType
+  GET|HEAD        lab/management/test-types/create lab.test-types.create ΓÇ║ Web\LabManagementController@createTestType
+  GET|HEAD        lab/management/test-types/{testType} lab.test-types.show ΓÇ║ Web\LabManagementController@showTestType
+  PUT             lab/management/test-types/{testType} lab.test-types.update ΓÇ║ Web\LabManagementController@updateTestΓÇª
+  DELETE          lab/management/test-types/{testType} lab.test-types.destroy ΓÇ║ Web\LabManagementController@destroyTeΓÇª
+  GET|HEAD        lab/management/test-types/{testType}/edit lab.test-types.edit ΓÇ║ Web\LabManagementController@editTesΓÇª
+  GET|HEAD        lab/management/tests ................................. lab.tests ΓÇ║ Web\LabManagementController@tests
+  POST            lab/management/tests ....................... lab.tests.store ΓÇ║ Web\LabManagementController@storeTest
+  GET|HEAD        lab/management/tests/create .............. lab.tests.create ΓÇ║ Web\LabManagementController@createTest
+  PUT             lab/management/tests/{test} .............. lab.tests.update ΓÇ║ Web\LabManagementController@updateTest
+  DELETE          lab/management/tests/{test} ............ lab.tests.destroy ΓÇ║ Web\LabManagementController@destroyTest
+  GET|HEAD        lab/management/tests/{test}/edit ............. lab.tests.edit ΓÇ║ Web\LabManagementController@editTest
+  GET|HEAD        lab/quality-control ................. lab.quality-control.index ΓÇ║ Web\QualityControlController@index
+  POST            lab/quality-control ................. lab.quality-control.store ΓÇ║ Web\QualityControlController@store
+  GET|HEAD        lab/quality-control-statistics lab.quality-control.statistics ΓÇ║ Web\QualityControlController@statisΓÇª
+  GET|HEAD        lab/quality-control/create ........ lab.quality-control.create ΓÇ║ Web\QualityControlController@create
+  GET|HEAD        lab/quality-control/{qualityControl} .. lab.quality-control.show ΓÇ║ Web\QualityControlController@show
+  PUT             lab/quality-control/{qualityControl} lab.quality-control.update ΓÇ║ Web\QualityControlController@updaΓÇª
+  DELETE          lab/quality-control/{qualityControl} lab.quality-control.destroy ΓÇ║ Web\QualityControlController@desΓÇª
+  GET|HEAD        lab/quality-control/{qualityControl}/edit lab.quality-control.edit ΓÇ║ Web\QualityControlController@eΓÇª
+  GET|HEAD        lab/test-types-by-category ... lab.test-types-by-category ΓÇ║ Web\LabController@getTestTypesByCategory
+  POST            lab/{labRequest}/approve ............. lab.approve-results ΓÇ║ Web\LabResultsController@approveResults
+  GET|HEAD        lab/{labRequest}/enter-results ........... lab.enter-results ΓÇ║ Web\LabResultsController@enterResults
+  GET|HEAD        lab/{labRequest}/pdf ....................... lab.generate-pdf ΓÇ║ Web\LabResultsController@generatePdf
+  POST            lab/{labRequest}/store-results ........... lab.store-results ΓÇ║ Web\LabResultsController@storeResults
+  POST            lab/{labRequest}/verify ................ lab.verify-results ΓÇ║ Web\LabResultsController@verifyResults
+  PUT             lab/{lab} .................................................... lab.update ΓÇ║ Web\LabController@update
+  GET|HEAD        lab/{lab} ........................................................ lab.show ΓÇ║ Web\LabController@show
+  DELETE          lab/{lab} .................................................. lab.destroy ΓÇ║ Web\LabController@destroy
+  POST            lab/{lab}/complete ................................... lab.complete ΓÇ║ Web\LabController@completeTest
+  GET|HEAD        lab/{lab}/edit ................................................... lab.edit ΓÇ║ Web\LabController@edit
+  POST            lab/{lab}/start ............................................ lab.start ΓÇ║ Web\LabController@startTest
+  GET|HEAD        login ......................................................... login ΓÇ║ Web\AuthController@showLogin
+  POST            login ...................................................... login.submit ΓÇ║ Web\AuthController@login
+  POST            logout .......................................................... logout ΓÇ║ Web\AuthController@logout
+  GET|HEAD        messages .............................................. messages.index ΓÇ║ Web\MessageController@index
+  POST            messages .............................................. messages.store ΓÇ║ Web\MessageController@store
+  GET|HEAD        messages/latest .................................. messages.latest ΓÇ║ Web\MessageController@getLatest
+  GET|HEAD        messages/unread-count ................. messages.unread-count ΓÇ║ Web\MessageController@getUnreadCount
+  GET|HEAD        messages/users ..................................... messages.users ΓÇ║ Web\MessageController@getUsers
+  GET|HEAD        messages/{id} ........................................... messages.show ΓÇ║ Web\MessageController@show
+  POST            messages/{id}/mark-read ...................... messages.mark-read ΓÇ║ Web\MessageController@markAsRead
+  POST            messages/{id}/send ............................... messages.send ΓÇ║ Web\MessageController@sendMessage
+  GET|HEAD        my-lab-results ........................................ lab.my-results ΓÇ║ Web\LabController@myResults
+  GET|HEAD        my-lab-results/{labRequest} .............. lab.my-result-details ΓÇ║ Web\LabController@myResultDetails
+  GET|HEAD        my-lab-results/{labRequest}/pdf . lab.my-result-pdf ΓÇ║ Web\LabResultsController@generatePdfForPatient
+  GET|HEAD        notification-preferences notification-preferences.index ΓÇ║ Web\NotificationPreferenceController@index
+  POST            notification-preferences notification-preferences.update ΓÇ║ Web\NotificationPreferenceController@updΓÇª
+  GET|HEAD        notification-preferences/check-new-work notification-preferences.check-new-work ΓÇ║ Web\NotificationPΓÇª
+  GET|HEAD        notification-settings ........................................................ notification-settings
+  GET|HEAD        notifications ............................... notifications.index ΓÇ║ Web\NotificationController@index
+  DELETE          notifications/clear-all .............. notifications.clear-all ΓÇ║ Web\NotificationController@clearAll
+  GET|HEAD        notifications/latest ................... notifications.latest ΓÇ║ Web\NotificationController@getLatest
+  POST            notifications/mark-all-read . notifications.mark-all-read ΓÇ║ Web\NotificationController@markAllAsRead
+  GET|HEAD        notifications/unread-count .. notifications.unread-count ΓÇ║ Web\NotificationController@getUnreadCount
+  DELETE          notifications/{id} ...................... notifications.destroy ΓÇ║ Web\NotificationController@destroy
+  POST            notifications/{id}/mark-read ....... notifications.mark-read ΓÇ║ Web\NotificationController@markAsRead
+  POST            patients .............................................. patients.store ΓÇ║ Web\PatientController@store
+  GET|HEAD        patients .............................................. patients.index ΓÇ║ Web\PatientController@index
+  POST            patients/bulk-delete ....................... patients.bulk-delete ΓÇ║ Web\PatientController@bulkDelete
+  GET|HEAD        patients/check-duplicates ........ patients.check-duplicates ΓÇ║ Web\PatientController@checkDuplicates
+  GET|HEAD        patients/create ..................................... patients.create ΓÇ║ Web\PatientController@create
+  GET|HEAD        patients/pending-registrations patients.pending-registrations ΓÇ║ Web\PatientController@pendingRegistΓÇª
+  GET|HEAD        patients/search ..................................... patients.search ΓÇ║ Web\PatientController@search
+  PUT             patients/{patient} .................................. patients.update ΓÇ║ Web\PatientController@update
+  PATCH           patients/{patient} .................................................... Web\PatientController@update
+  DELETE          patients/{patient} ................................ patients.destroy ΓÇ║ Web\PatientController@destroy
+  GET|HEAD        patients/{patient} ...................................... patients.show ΓÇ║ Web\PatientController@show
+  POST            patients/{patient}/approve ............ patients.approve ΓÇ║ Web\PatientController@approveRegistration
+  GET|HEAD        patients/{patient}/details .............. patients.details ΓÇ║ Web\PatientController@getPatientDetails
+  GET|HEAD        patients/{patient}/edit ................................. patients.edit ΓÇ║ Web\PatientController@edit
+  GET|HEAD        patients/{patient}/financial-summary patients.financial-summary ΓÇ║ Web\PatientController@financialSuΓÇª
+  POST            patients/{patient}/portal-access patients.portal-access ΓÇ║ Web\PatientController@generatePortalAccess
+  POST            patients/{patient}/portal-reset-password patients.portal-reset-password ΓÇ║ Web\PatientController@resΓÇª
+  POST            patients/{patient}/reject ............... patients.reject ΓÇ║ Web\PatientController@rejectRegistration
+  GET|HEAD        permissions ..................................... permissions.index ΓÇ║ Web\RoleController@permissions
+  GET|HEAD        pharmacy ............................................. pharmacy.index ΓÇ║ Web\PharmacyController@index
+  POST            pharmacy ............................................. pharmacy.store ΓÇ║ Web\PharmacyController@store
+  GET|HEAD        pharmacy/analytics ........................... pharmacy.analytics ΓÇ║ Web\PharmacyController@analytics
+  GET|HEAD        pharmacy/create .................................... pharmacy.create ΓÇ║ Web\PharmacyController@create
+  GET|HEAD        pharmacy/dispensing ........................ pharmacy.dispensing ΓÇ║ Web\PharmacyController@dispensing
+  POST            pharmacy/dispensing/process . pharmacy.dispensing.process ΓÇ║ Web\PharmacyController@processDispensing
+  GET|HEAD        pharmacy/history ................................. pharmacy.history ΓÇ║ Web\PharmacyController@history
+  POST            pharmacy/notifications/{notification}/read pharmacy.notifications.read ΓÇ║ Web\PharmacyController@marΓÇª
+  GET|HEAD        pharmacy/notifications/{patientId} pharmacy.notifications ΓÇ║ Web\PharmacyController@getPatientNotifiΓÇª
+  GET|HEAD        pharmacy/prescriptions ............... pharmacy.prescriptions ΓÇ║ Web\PharmacyController@prescriptions
+  GET|HEAD        pharmacy/prescriptions/{prescription} pharmacy.prescriptions.show ΓÇ║ Web\PharmacyController@showPresΓÇª
+  PUT             pharmacy/prescriptions/{prescription} pharmacy.prescriptions.update ΓÇ║ Web\PharmacyController@updateΓÇª
+  POST            pharmacy/prescriptions/{prescription}/cancel pharmacy.prescriptions.cancel ΓÇ║ Web\PharmacyControllerΓÇª
+  POST            pharmacy/prescriptions/{prescription}/complete pharmacy.prescriptions.complete ΓÇ║ Web\PharmacyControΓÇª
+  POST            pharmacy/prescriptions/{prescription}/dispense pharmacy.prescriptions.dispense ΓÇ║ Web\PharmacyControΓÇª
+  GET|HEAD        pharmacy/prescriptions/{prescription}/edit pharmacy.prescriptions.edit ΓÇ║ Web\PharmacyController@ediΓÇª
+  POST            pharmacy/prescriptions/{prescription}/generate-billing pharmacy.prescriptions.generate-billing ΓÇ║ WeΓÇª
+  GET|HEAD        pharmacy/prescriptions/{prescription}/history pharmacy.prescriptions.history ΓÇ║ Web\PharmacyControllΓÇª
+  GET|HEAD        pharmacy/prescriptions/{prescription}/interactions pharmacy.prescriptions.interactions ΓÇ║ Web\PharmaΓÇª
+  GET|HEAD        pharmacy/prescriptions/{prescription}/print pharmacy.prescriptions.print ΓÇ║ Web\PharmacyController@pΓÇª
+  GET|HEAD        pharmacy/stock ....................................... pharmacy.stock ΓÇ║ Web\PharmacyController@stock
+  GET|HEAD        pharmacy/stock-alerts ................ pharmacy.stock-alerts ΓÇ║ Web\PharmacyController@getStockAlerts
+  POST            pharmacy/stock/add ............................ pharmacy.stock.add ΓÇ║ Web\PharmacyController@addStock
+  POST            pharmacy/stock/update ................... pharmacy.stock.update ΓÇ║ Web\PharmacyController@updateStock
+  GET|HEAD        pharmacy/{pharmacy} .................................... pharmacy.show ΓÇ║ Web\PharmacyController@show
+  PUT|PATCH       pharmacy/{pharmacy} ................................ pharmacy.update ΓÇ║ Web\PharmacyController@update
+  DELETE          pharmacy/{pharmacy} .............................. pharmacy.destroy ΓÇ║ Web\PharmacyController@destroy
+  GET|HEAD        pharmacy/{pharmacy}/edit ............................... pharmacy.edit ΓÇ║ Web\PharmacyController@edit
+  GET|HEAD        prescriptions/{prescription} .......... prescriptions.show ΓÇ║ Web\PharmacyController@showPrescription
+  GET|HEAD        pricing ......................................... pricing.index ΓÇ║ Web\ServicePricingController@index
+  POST            pricing ......................................... pricing.store ΓÇ║ Web\ServicePricingController@store
+  POST            pricing/bulk-import .................. pricing.bulk-import ΓÇ║ Web\ServicePricingController@bulkImport
+  GET|HEAD        pricing/create ................................ pricing.create ΓÇ║ Web\ServicePricingController@create
+  GET|HEAD        pricing/export ................................ pricing.export ΓÇ║ Web\ServicePricingController@export
+  GET|HEAD        pricing/price-list ..................... pricing.price-list ΓÇ║ Web\ServicePricingController@priceList
+  GET|HEAD        pricing/{pricing} ................................. pricing.show ΓÇ║ Web\ServicePricingController@show
+  PUT|PATCH       pricing/{pricing} ............................. pricing.update ΓÇ║ Web\ServicePricingController@update
+  DELETE          pricing/{pricing} ........................... pricing.destroy ΓÇ║ Web\ServicePricingController@destroy
+  GET|HEAD        pricing/{pricing}/edit ............................ pricing.edit ΓÇ║ Web\ServicePricingController@edit
+  POST            pricing/{pricing}/toggle-active .. pricing.toggle-active ΓÇ║ Web\ServicePricingController@toggleActive
+  GET|HEAD        print-settings ............................ print-settings.index ΓÇ║ Web\PrintSettingsController@index
+  POST            print-settings ............................ print-settings.store ΓÇ║ Web\PrintSettingsController@store
+  GET|HEAD        print-settings/current ............ print-settings.current ΓÇ║ Web\PrintSettingsController@getSettings
+  GET|HEAD        print-settings/formats ............. print-settings.formats ΓÇ║ Web\PrintSettingsController@getFormats
+  GET|HEAD        profile .................................................. profile.show ΓÇ║ Web\UserController@profile
+  PUT             profile .......................................... profile.update ΓÇ║ Web\UserController@updateProfile
+  PUT             profile/password .............................. profile.password ΓÇ║ Web\UserController@changePassword
+  GET|HEAD        queues .................................................... queues.index ΓÇ║ Web\QueueController@index
+  POST            queues/call-next ................................... queues.call-next ΓÇ║ Web\QueueController@callNext
+  GET|HEAD        queues/emergency .................................. queues.emergency ΓÇ║ Web\QueueController@emergency
+  GET|HEAD        queues/lab .................................................... queues.lab ΓÇ║ Web\QueueController@lab
+  GET|HEAD        queues/opd .................................................... queues.opd ΓÇ║ Web\QueueController@opd
+  GET|HEAD        queues/pharmacy ..................................... queues.pharmacy ΓÇ║ Web\QueueController@pharmacy
+  GET|HEAD        queues/radiology .................................. queues.radiology ΓÇ║ Web\QueueController@radiology
+  GET|HEAD        queues/statistics ............................... queues.statistics ΓÇ║ Web\QueueController@statistics
+  GET|HEAD        queues/test ................................................ queues.test ΓÇ║ Web\QueueController@index
+  POST            queues/{id}/complete-serving ......... queues.complete-serving ΓÇ║ Web\QueueController@completeServing
+  GET|HEAD        queues/{id}/lab-details ........................ queues.lab-details ΓÇ║ Web\QueueController@labDetails
+  POST            queues/{id}/no-show ................................ queues.no-show ΓÇ║ Web\QueueController@markNoShow
+  GET|HEAD        queues/{id}/print-ticket ..................... queues.print-ticket ΓÇ║ Web\QueueController@printTicket
+  GET|HEAD        queues/{id}/reprint-ticket ............... queues.reprint-ticket ΓÇ║ Web\QueueController@reprintTicket
+  POST            queues/{id}/start-serving .................. queues.start-serving ΓÇ║ Web\QueueController@startServing
+  GET|HEAD        radiology .......................................... radiology.index ΓÇ║ Web\RadiologyController@index
+  POST            radiology .......................................... radiology.store ΓÇ║ Web\RadiologyController@store
+  GET|HEAD        radiology/create ................................. radiology.create ΓÇ║ Web\RadiologyController@create
+  GET|HEAD        radiology/images/{image}/serve ......... radiology.images.serve ΓÇ║ Web\RadiologyController@serveImage
+  GET|HEAD        radiology/radiologists ....... radiology.radiologists.list ΓÇ║ Web\RadiologyController@getRadiologists
+  GET|HEAD        radiology/reports .............................. radiology.reports ΓÇ║ Web\RadiologyController@reports
+  PUT             radiology/reports/{report} ......... radiology.reports.update ΓÇ║ Web\RadiologyController@updateReport
+  GET|HEAD        radiology/reports/{report} ............. radiology.reports.show ΓÇ║ Web\RadiologyController@showReport
+  GET|HEAD        radiology/reports/{report}/edit ........ radiology.reports.edit ΓÇ║ Web\RadiologyController@editReport
+  GET|HEAD        radiology/reports/{report}/pdf ... radiology.reports.pdf ΓÇ║ Web\RadiologyController@generateReportPdf
+  POST            radiology/requests/{radiology}/start-study radiology.start-study ΓÇ║ Web\RadiologyController@startStuΓÇª
+  GET|HEAD        radiology/series/{series}/images . radiology.series.images ΓÇ║ Web\RadiologyController@getSeriesImages
+  GET|HEAD        radiology/studies .............................. radiology.studies ΓÇ║ Web\RadiologyController@studies
+  GET|HEAD        radiology/studies/{study} ............... radiology.studies.show ΓÇ║ Web\RadiologyController@showStudy
+  POST            radiology/studies/{study}/complete radiology.complete-study ΓÇ║ Web\RadiologyController@completeStudy
+  GET|HEAD        radiology/studies/{study}/create-report radiology.reports.create ΓÇ║ Web\RadiologyController@createReΓÇª
+  GET|HEAD        radiology/studies/{study}/pdf ..... radiology.studies.pdf ΓÇ║ Web\RadiologyController@generateStudyPdf
+  POST            radiology/studies/{study}/store-report radiology.reports.store ΓÇ║ Web\RadiologyController@storeReport
+  POST            radiology/studies/{study}/upload-images radiology.studies.upload-images ΓÇ║ Web\RadiologyController@uΓÇª
+  GET|HEAD        radiology/studies/{study}/viewer ................. radiology.viewer ΓÇ║ Web\RadiologyController@viewer
+  POST            radiology/walk-in/{visit} ... radiology.walk-in.store ΓÇ║ Web\RadiologyController@storeFromWalkInVisit
+  GET|HEAD        radiology/walk-in/{visit}/create radiology.walk-in.create ΓÇ║ Web\RadiologyController@createFromWalkIΓÇª
+  GET|HEAD        radiology/{radiology} ................................ radiology.show ΓÇ║ Web\RadiologyController@show
+  PUT|PATCH       radiology/{radiology} ............................ radiology.update ΓÇ║ Web\RadiologyController@update
+  DELETE          radiology/{radiology} .......................... radiology.destroy ΓÇ║ Web\RadiologyController@destroy
+  GET|HEAD        radiology/{radiology}/edit ........................... radiology.edit ΓÇ║ Web\RadiologyController@edit
+  GET|HEAD        receipts/{id}/preview ................ receipts.preview ΓÇ║ Web\PrintSettingsController@previewReceipt
+  GET|HEAD        receipts/{id}/print ................ receipts.print ΓÇ║ Web\PrintSettingsController@generateReceiptPdf
+  GET|HEAD        register ................................................ register ΓÇ║ Web\AuthController@showRegister
+  POST            register ............................................. register.submit ΓÇ║ Web\AuthController@register
+  GET|HEAD        revenue ....................................... revenue.index ΓÇ║ Web\RevenueAnalyticsController@index
+  GET|HEAD        revenue/export .............................. revenue.export ΓÇ║ Web\RevenueAnalyticsController@export
+  GET|HEAD        revenue/invoice/{invoice}/trail revenue.invoice.trail ΓÇ║ Web\RevenueAnalyticsController@getInvoiceTrΓÇª
+  GET|HEAD        revenue/payment/{payment}/trail revenue.payment.trail ΓÇ║ Web\RevenueAnalyticsController@getPaymentTrΓÇª
+  GET|HEAD        revenue/transactions/detailed revenue.transactions.detailed ΓÇ║ Web\RevenueAnalyticsController@getDetΓÇª
+  GET|HEAD        revenue/transactions/payment-method revenue.transactions.payment-method ΓÇ║ Web\RevenueAnalyticsContrΓÇª
+  GET|HEAD        revenue/transactions/service-type revenue.transactions.service-type ΓÇ║ Web\RevenueAnalyticsControlleΓÇª
+  GET|HEAD        roles ....................................................... roles.index ΓÇ║ Web\RoleController@index
+  POST            roles ....................................................... roles.store ΓÇ║ Web\RoleController@store
+  GET|HEAD        roles/create .............................................. roles.create ΓÇ║ Web\RoleController@create
+  GET|HEAD        roles/{role} .................................................. roles.show ΓÇ║ Web\RoleController@show
+  PUT|PATCH       roles/{role} .............................................. roles.update ΓÇ║ Web\RoleController@update
+  DELETE          roles/{role} ............................................ roles.destroy ΓÇ║ Web\RoleController@destroy
+  GET|HEAD        roles/{role}/edit ............................................. roles.edit ΓÇ║ Web\RoleController@edit
+  GET|HEAD        sanctum/csrf-cookie .............. sanctum.csrf-cookie ΓÇ║ Laravel\Sanctum ΓÇ║ CsrfCookieController@show
+  GET|HEAD        settings ............................................. settings.index ΓÇ║ Web\SettingsController@index
+  POST            settings ........................................... settings.update ΓÇ║ Web\SettingsController@update
+  GET|HEAD        settings/app-versions ............... settings.app-versions ΓÇ║ Web\AppVersionSettingsController@index
+  POST            settings/app-versions ......... settings.app-versions.store ΓÇ║ Web\AppVersionSettingsController@store
+  PUT             settings/app-versions/{version} settings.app-versions.update ΓÇ║ Web\AppVersionSettingsController@updΓÇª
+  DELETE          settings/app-versions/{version} settings.app-versions.destroy ΓÇ║ Web\AppVersionSettingsController@deΓÇª
+  POST            settings/app-versions/{version}/toggle-active settings.app-versions.toggle-active ΓÇ║ Web\AppVersionSΓÇª
+  POST            settings/app-versions/{version}/toggle-force settings.app-versions.toggle-force ΓÇ║ Web\AppVersionSetΓÇª
+  GET|HEAD        settings/clean-data ......................... settings.clean-data ΓÇ║ Web\SettingsController@cleanData
+  POST            settings/clean-data .......... settings.process-clean-data ΓÇ║ Web\SettingsController@processCleanData
+  GET|HEAD        settings/clean-data/stats ........ settings.clean-data.stats ΓÇ║ Web\SettingsController@getModuleStats
+  POST            settings/clean-module ......... settings.clean-module ΓÇ║ Web\SettingsController@cleanIndividualModule
+  GET|HEAD        settings/jitsi .................................. settings.jitsi ΓÇ║ Web\JitsiSettingsController@index
+  PUT             settings/jitsi .......................... settings.jitsi.update ΓÇ║ Web\JitsiSettingsController@update
+  POST            settings/jitsi/test ............... settings.jitsi.test ΓÇ║ Web\JitsiSettingsController@testConnection
+  GET|HEAD        settings/payment ............................ settings.payment ΓÇ║ Web\PaymentSettingsController@index
+  PUT             settings/payment .................... settings.payment.update ΓÇ║ Web\PaymentSettingsController@update
+  POST            settings/payment/test ......... settings.payment.test ΓÇ║ Web\PaymentSettingsController@testConnection
+  GET|HEAD        shop ......................................................... shop.index ΓÇ║ Web\ShopController@index
+  GET|HEAD        shop/cart ...................................................... shop.cart ΓÇ║ Web\ShopController@cart
+  POST            shop/cart/add ......................................... shop.cart.add ΓÇ║ Web\ShopController@addToCart
+  DELETE          shop/cart/{id}/remove ......................... shop.cart.remove ΓÇ║ Web\ShopController@removeFromCart
+  PUT             shop/cart/{id}/update ......................... shop.cart.update ΓÇ║ Web\ShopController@updateCartItem
+  GET|HEAD        shop/checkout .......................................... shop.checkout ΓÇ║ Web\ShopController@checkout
+  POST            shop/checkout ........................... shop.checkout.process ΓÇ║ Web\ShopController@processCheckout
+  GET|HEAD        shop/order/{order}/success .................... shop.order-success ΓÇ║ Web\ShopController@orderSuccess
+  GET|HEAD        shop/payment/{order} ..................................... shop.payment ΓÇ║ Web\ShopController@payment
+  POST            shop/payment/{order}/process .............. shop.payment.process ΓÇ║ Web\ShopController@processPayment
+  GET|HEAD        shop/product/{id} .............................................. shop.show ΓÇ║ Web\ShopController@show
+  GET|HEAD        storage/{path} ....................................................................... storage.local
+  GET|HEAD        surgery ................................................ surgery.index ΓÇ║ Web\SurgeryController@index
+  POST            surgery ................................................ surgery.store ΓÇ║ Web\SurgeryController@store
+  GET|HEAD        surgery/create ....................................... surgery.create ΓÇ║ Web\SurgeryController@create
+  GET|HEAD        surgery/{surgery} ........................................ surgery.show ΓÇ║ Web\SurgeryController@show
+  PUT|PATCH       surgery/{surgery} .................................... surgery.update ΓÇ║ Web\SurgeryController@update
+  DELETE          surgery/{surgery} .................................. surgery.destroy ΓÇ║ Web\SurgeryController@destroy
+  POST            surgery/{surgery}/complete ....................... surgery.complete ΓÇ║ Web\SurgeryController@complete
+  GET|HEAD        surgery/{surgery}/edit ................................... surgery.edit ΓÇ║ Web\SurgeryController@edit
+  POST            surgery/{surgery}/start ................................ surgery.start ΓÇ║ Web\SurgeryController@start
+  POST            switch-branch .................................... switch-branch ΓÇ║ Web\BranchController@switchBranch
+  POST            teleconsultations ................... teleconsultations.store ΓÇ║ Web\TeleconsultationController@store
+  GET|HEAD        teleconsultations ................... teleconsultations.index ΓÇ║ Web\TeleconsultationController@index
+  GET|HEAD        teleconsultations/create .......... teleconsultations.create ΓÇ║ Web\TeleconsultationController@create
+  GET|HEAD        teleconsultations/debug ............. teleconsultations.debug ΓÇ║ Web\TeleconsultationController@debug
+  GET|HEAD        teleconsultations/test ................ teleconsultations.test ΓÇ║ Web\TeleconsultationController@test
+  GET|HEAD        teleconsultations/{teleconsultation} .. teleconsultations.show ΓÇ║ Web\TeleconsultationController@show
+  PUT             teleconsultations/{teleconsultation} teleconsultations.update ΓÇ║ Web\TeleconsultationController@updaΓÇª
+  DELETE          teleconsultations/{teleconsultation} teleconsultations.destroy ΓÇ║ Web\TeleconsultationController@desΓÇª
+  POST            teleconsultations/{teleconsultation}/cancel teleconsultations.cancel ΓÇ║ Web\TeleconsultationControllΓÇª
+  POST            teleconsultations/{teleconsultation}/consent teleconsultations.consent ΓÇ║ Web\TeleconsultationControΓÇª
+  GET|HEAD        teleconsultations/{teleconsultation}/edit teleconsultations.edit ΓÇ║ Web\TeleconsultationController@eΓÇª
+  POST            teleconsultations/{teleconsultation}/end teleconsultations.end ΓÇ║ Web\TeleconsultationController@end
+  POST            teleconsultations/{teleconsultation}/start teleconsultations.start ΓÇ║ Web\TeleconsultationControllerΓÇª
+  GET|HEAD        test-queue .................................................. test-queue ΓÇ║ Web\QueueController@index
+  GET|HEAD        test-realtime ........................................................................ test.realtime
+  GET|HEAD        test-search ............................................................................ test-search
+  GET|HEAD        test/403 .................................................................................. test.403
+  GET|HEAD        test/404 .................................................................................. test.404
+  GET|HEAD        test/500 .................................................................................. test.500
+  GET|HEAD        up ................................................................................................. 
+  GET|HEAD        users ....................................................... users.index ΓÇ║ Web\UserController@index
+  POST            users ....................................................... users.store ΓÇ║ Web\UserController@store
+  GET|HEAD        users/create .............................................. users.create ΓÇ║ Web\UserController@create
+  GET|HEAD        users/{user} .................................................. users.show ΓÇ║ Web\UserController@show
+  PUT|PATCH       users/{user} .............................................. users.update ΓÇ║ Web\UserController@update
+  DELETE          users/{user} ............................................ users.destroy ΓÇ║ Web\UserController@destroy
+  GET|HEAD        users/{user}/edit ............................................. users.edit ΓÇ║ Web\UserController@edit
+  GET|HEAD        users/{user}/permissions ........... users.manage-permissions ΓÇ║ Web\UserController@managePermissions
+  PUT             users/{user}/permissions ........... users.update-permissions ΓÇ║ Web\UserController@updatePermissions
+  POST            users/{user}/permissions/grant ......... users.grant-permission ΓÇ║ Web\UserController@grantPermission
+  POST            users/{user}/permissions/revoke ...... users.revoke-permission ΓÇ║ Web\UserController@revokePermission
+  GET|HEAD        visits .................................................... visits.index ΓÇ║ Web\VisitController@index
+  POST            visits .................................................... visits.store ΓÇ║ Web\VisitController@store
+  POST            visits/bulk-delete ............................. visits.bulk-delete ΓÇ║ Web\VisitController@bulkDelete
+  GET|HEAD        visits/create ........................................... visits.create ΓÇ║ Web\VisitController@create
+  GET|HEAD        visits/{visit} .............................................. visits.show ΓÇ║ Web\VisitController@show
+  PUT|PATCH       visits/{visit} .......................................... visits.update ΓÇ║ Web\VisitController@update
+  DELETE          visits/{visit} ........................................ visits.destroy ΓÇ║ Web\VisitController@destroy
+  POST            visits/{visit}/complete-lab-service lab.complete-walk-in-service ΓÇ║ Web\LabController@completeWalkInΓÇª
+  GET|HEAD        visits/{visit}/edit ......................................... visits.edit ΓÇ║ Web\VisitController@edit
+  GET|HEAD        visits/{visit}/lab-request ....... lab.create-from-walk-in ΓÇ║ Web\LabController@createFromWalkInVisit
+  POST            visits/{visit}/lab-request ......... lab.store-from-walk-in ΓÇ║ Web\LabController@storeFromWalkInVisit
+  GET|HEAD        vitals ................................................... vitals.index ΓÇ║ Web\VitalsController@index
+  POST            vitals ................................................... vitals.store ΓÇ║ Web\VitalsController@store
+  GET|HEAD        vitals/record .......................................... vitals.create ΓÇ║ Web\VitalsController@create
+  GET|HEAD        vitals/{vital} ............................................. vitals.show ΓÇ║ Web\VitalsController@show
+  PUT             vitals/{vital} ......................................... vitals.update ΓÇ║ Web\VitalsController@update
+  DELETE          vitals/{vital} ....................................... vitals.destroy ΓÇ║ Web\VitalsController@destroy
+  GET|HEAD        vitals/{vital}/edit ........................................ vitals.edit ΓÇ║ Web\VitalsController@edit
+  GET|HEAD        walk-ins .............................................. walk-ins.index ΓÇ║ Web\WalkInsController@index
+  GET|HEAD        walk-ins/export ..................................... walk-ins.export ΓÇ║ Web\WalkInsController@export
+  GET|HEAD        walk-ins/statistics ......................... walk-ins.statistics ΓÇ║ Web\WalkInsController@statistics
+  GET|HEAD        walk-ins/{id} ........................................... walk-ins.show ΓÇ║ Web\WalkInsController@show
+  GET|HEAD        walk-ins/{id}/timeline .......................... walk-ins.timeline ΓÇ║ Web\WalkInsController@timeline
+  GET|HEAD        wards ....................................................... wards.index ΓÇ║ Web\WardController@index
+  POST            wards ....................................................... wards.store ΓÇ║ Web\WardController@store
+  GET|HEAD        wards/create .............................................. wards.create ΓÇ║ Web\WardController@create
+  GET|HEAD        wards/{ward} .................................................. wards.show ΓÇ║ Web\WardController@show
+  PUT|PATCH       wards/{ward} .............................................. wards.update ΓÇ║ Web\WardController@update
+  DELETE          wards/{ward} ............................................ wards.destroy ΓÇ║ Web\WardController@destroy
+  GET|HEAD        wards/{ward}/edit ............................................. wards.edit ΓÇ║ Web\WardController@edit
+
+                                                                                                 Showing [1335] routes
+

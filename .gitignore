@@ -1,0 +1,97 @@
+*.log
+.DS_Store
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/auth.json
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/logs/*
+!/storage/logs/.gitignore
+/storage/pail
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitignore
+!/bootstrap/cache/README.md
+/vendor
+Homestead.json
+Homestead.yaml
+Thumbs.db
+
+# Firebase service account (never commit real credentials)
+/storage/app/firebase/*.json
+!storage/app/firebase/.gitkeep
+
+# ---------------------------------------------------------------------------
+# GitHub / public repo safety — never commit secrets, PHI, or prod snapshots
+# ---------------------------------------------------------------------------
+
+# All env variants except the sanitized template
+.env.*
+!.env.example
+
+# Composer auth (may contain GitHub/Private Packagist tokens)
+/auth.json
+
+# Private keys & certificates
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+
+# Local SQLite database
+/database/database.sqlite
+/database/*.sqlite
+/database/*.sqlite3
+
+# SQL dumps & backups (may contain patient/staff data)
+/storage/app/backups/
+/storage/app/demo/
+/database/seeders/test_app_version.sql
+*.sql.gz
+*.sql.bak
+
+# User uploads & runtime media (patient photos, radiology, documents)
+/uploads/
+/storage/app/uploads/
+/storage/app/public/branding/
+/storage/app/public/profile_pictures/
+/storage/app/public/radiology/
+/storage/app/public/uploads/
+/storage/app/private/*
+!/storage/app/private/.gitignore
+/storage/app/temp/
+/storage/app/logs/
+
+# Project archives (may bundle .env, vendor, or DB dumps)
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# PHPUnit cache
+.phpunit.result.cache
+.phpunit.cache
+
+# Generated seeders are DB snapshots with real users, tokens, sessions & PHI
+/database/seeders/Generated/*
+!/database/seeders/Generated/README.md

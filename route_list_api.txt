@@ -1,0 +1,12 @@
+﻿C:\xampp\php\php.exe : Cannot create a file when that file already exists.
+At C:\Users\Admin\AppData\Local\Temp\ps-script-f3e96b3d-594b-4782-9bbe-1f937e8356a9.ps1:87 char:42
++ ... al\backend; C:\xampp\php\php.exe artisan route:list --path=api --colu ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Cannot create a...already exists.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+                                          
+  The "--columns" option does not exist.  
+                                          
+
